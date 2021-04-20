@@ -8,7 +8,6 @@
 //
 //} =============================================== =============================
 
-
 #include "TXlib.h"
 
 void PaintBackground();
@@ -72,6 +71,8 @@ void PaintAppl(int x, int y, double sizeAppl)
 
 void MoveKyraVedetCip_1()
     {
+    txPlaySound ("zvuki-utro.wav");
+
     for (int t = 0; t <= 200; t += 2)
         {
         PaintBackground();
@@ -170,6 +171,8 @@ void MoveCipaWalking_3()
 
 void FellAppl_4()
     {
+    txPlaySound ("applbum.wav");
+
     for (int t = 0; t <= 200; t += 10)
         {
         PaintBackground();
@@ -273,11 +276,14 @@ void VhodGysen_5()
     txTextOut (700, 500, "-КТО ЭТО???");
 
     PaintGysen (645, 640, 1, 1, 2, 1);
-    txSleep (1000);
+    txPlaySound ("gysen1.wav");
+    txSleep (1600);
     }
 
 void PobegGysen_6()
     {
+    txPlaySound ("golosa-kur-i-cypljat.wav");
+
     for (int t = 0; t <= 600; t += 2)
         {
         PaintBackground();
@@ -500,13 +506,13 @@ void FinishTitles()
 
         txSetColor (TX_WHITE);
         txSelectFont ("Cambria", 70);
-        txTextOut (403, 820 - 2*t,  "Мульт выполнил учитель информатики");
+        txTextOut (373, 820 - 2*t,  "Мультфильм выполнила учитель информатики");
         txTextOut (453, 890 - 2*t,  "Дьяченко Екатерина Михайловна");
         txTextOut (503, 960 - 2*t,  "г.Нефтеюганск, 2021 год");
 
         txSetColor (TX_BLACK);
         txSelectFont ("Cambria", 70);
-        txTextOut (400, 822 - 2*t, "Мульт выполнил учитель информатики");
+        txTextOut (370, 822 - 2*t, "Мультфильм выполнила учитель информатики");
         txTextOut (450, 892 - 2*t, "Дьяченко Екатерина Михайловна");
         txTextOut (500, 960 - 2*t, "г.Нефтеюганск, 2021 год");
 
