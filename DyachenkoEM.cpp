@@ -21,6 +21,7 @@ void PaintKura      (int x, int y, double sizeX, double sizeY, int glazKyra,
 void PaintGysen     (int x, int y, double sizeX, double sizeY, double sizeGlazGysen, int LR);
 void PaintAppl      (int x, int y, double sizeAppl);
 void PaintOblako    (int x, int y, double size);
+void PaintCat       (int x, int y);
 void StartTitles();
 void MoveKyraVedetCip_1();
 void MoveCipaWalking_2();
@@ -82,6 +83,8 @@ void MoveKyraVedetCip_1()
         PaintCipa (-70  + 2*t, 600,  0.8, 0.8,       1, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2*(-5),  1, 0);
         PaintCipa (-180 + 2*t, 600,  0.8, 0.8,       1, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2*(-5),  1, 0);
         PaintCipa (-140 + 2*t, 580,  0.8, 0.8,       1, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2*(-5),  1, 0);
+
+       // PaintCat (350, 450);
 
         t++;
         txSleep (100);
@@ -321,11 +324,11 @@ void PaintBackground()
     PaintTree (200, 370, 1.2);
     PaintTree (100, 380, 1.7);
 
-    PaintAppleTree (920,  320);
+    PaintAppleTree ( 920, 320);
     PaintAppleTree (1080, 330);
     PaintAppleTree (800,  350);
 
-    PaintTree (725,  410, 0.8);
+    PaintTree ( 725, 410, 0.8);
     PaintTree (1200, 450, 0.8);
     PaintTree (1050, 425, 0.8);
     }
@@ -458,6 +461,48 @@ void PaintAppl(int x, int y, double sizeAppl)
     txSetColor     (RGB (255,   0,   0));
     txSetFillColor (RGB (255,   0,   0));
     txCircle (x, y, 10*sizeAppl);
+    }
+void PaintCat (int x, int y)
+    {
+    txSetColor     (RGB (255, 115,  50));         //голова кота
+    txSetFillColor (RGB (255, 115,  50));
+    txCircle (x, y - 70, 30);
+
+    txSetColor     (RGB (255, 115,  50));         //уши кота
+    txSetFillColor (RGB (255, 115,  50));
+    POINT triangleLeftYho [] = {{x - 30, y - 80}, {x - 35, y - 115}, {x - 5, y - 95}}; txPolygon (triangleLeftYho, 3);
+    POINT triangleRightYho[] = {{x + 25, y - 80}, {x + 30, y - 115}, {x,     y - 95}}; txPolygon (triangleRightYho,3);
+
+    txSetColor     (RGB (255, 115, 50), 25);     //тело кота
+    txLine   (x, y - 20, x, y - 70);
+
+    txSetColor     (RGB (255, 115, 50), 10);     //хвост кота
+    txArc    (x - 50, y - 70, x, y - 20, 180, 170);
+
+    txSetColor     (RGB (  0,   0,   0));
+    txSetFillColor (RGB (255, 255, 250));
+    txEllipse (x - 25, y - 25, x,      y);             //лапы кота
+    txEllipse (x,      y - 25, x + 25, y);
+
+    txEllipse (x - 25, y - 95, x,      y - 70);          //глаза кота
+    txEllipse (x,      y - 95, x + 25, y - 70);
+
+    txSetColor     (RGB (  0,   0,  0));
+    txSetFillColor (RGB (  0,   0,  0));
+    txEllipse (x - 15, y - 92, x - 10, y - 75);
+    txEllipse (x + 10, y - 92, x + 15, y - 75);
+                                                 //нос кота
+    POINT triangleNose[] = {{x - 5, y - 70}, {x, y - 65}, {x + 5, y - 70}}; txPolygon (triangleNose,3);
+    txLine (x - 40, y - 70, x -  5, y - 65);
+    txLine (x - 45, y - 63, x -  5, y - 63);
+    txLine (x - 40, y - 55, x -  5, y - 61);
+    txLine (x +  5, y - 65, x + 40, y - 70);
+    txLine (x +  5, y - 63, x + 45, y - 63);
+    txLine (x +  5, y - 61, x + 40, y - 55);
+
+    txSetColor     (RGB (255, 0, 0));         //язык кота
+    txSetFillColor (RGB (255, 0, 0));
+    txPie (x - 5, y - 60, x + 5, y - 45, -20, 20);
     }
 
 //------------------------------------------------------------------------------------------------------------
