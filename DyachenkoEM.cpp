@@ -21,7 +21,9 @@ void PaintKura      (int x, int y, double sizeX, double sizeY, int glazKyra,
 void PaintGysen     (int x, int y, double sizeX, double sizeY, double sizeGlazGysen, int LR);
 void PaintAppl      (int x, int y, double sizeAppl);
 void PaintOblako    (int x, int y, double size);
-void PaintCat       (int x, int y);
+void PaintCat       (int x, int y, double sizeX, double sizeY, int nose,
+                     int glazCatZrachek, double sizeGlazCat,
+                     int LeftYho, int RightYho, int LeftNogaCat, int RightNogaCat, int khvost, int color);
 void StartTitles();
 void MoveKyraVedetCip_1();
 void MoveCipaWalking_2();
@@ -31,6 +33,8 @@ void VhodGysen_5();
 void PobegGysen_6();
 void FinishTitles();
 
+const int ryzhiy = (RGB (255, 115, 50));
+      int brown  = (RGB (181,  90, 50));
 
 int main()
     {
@@ -76,15 +80,16 @@ void MoveKyraVedetCip_1()
         PaintOblako ( 400 - 0.5*t, 100, 1.2);
         PaintOblako ( 900 - 0.5*t,  60, 0.7);
 
-        PaintKura ( 40  + 2*t, 520,  1.2, 1.2, t/10%10, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2*(-5), -1, 0, t%2 * 5);
-        PaintCipa (-30  + 2*t, 580,  0.8, 0.8,       1, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2*(-5),  1, 0);
-        PaintCipa ( 10  + 2*t, 600,  0.8, 0.8,       1, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2*(-5),  1, 0);
-        PaintCipa (-100 + 2*t, 580,  0.8, 0.8,       1, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2*(-5),  1, 0);
-        PaintCipa (-70  + 2*t, 600,  0.8, 0.8,       1, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2*(-5),  1, 0);
-        PaintCipa (-180 + 2*t, 600,  0.8, 0.8,       1, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2*(-5),  1, 0);
-        PaintCipa (-140 + 2*t, 580,  0.8, 0.8,       1, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2*(-5),  1, 0);
+        PaintKura ( 40  + 2*t, 520,  1.2, 1.2, t/10%10, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2 *(-5), -1, 0, t%2 * 5);
+        PaintCipa (-30  + 2*t, 580,  0.8, 0.8,       1, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2 *(-5),  1, 0);
+        PaintCipa ( 10  + 2*t, 600,  0.8, 0.8,       1, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2 *(-5),  1, 0);
+        PaintCipa (-100 + 2*t, 580,  0.8, 0.8,       1, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2 *(-5),  1, 0);
+        PaintCipa (-70  + 2*t, 600,  0.8, 0.8,       1, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2 *(-5),  1, 0);
+        PaintCipa (-180 + 2*t, 600,  0.8, 0.8,       1, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2 *(-5),  1, 0);
+        PaintCipa (-140 + 2*t, 580,  0.8, 0.8,       1, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2 *(-5),  1, 0);
 
-       // PaintCat (350, 450);
+        PaintCat (850, 440, 0.7, 0.9, (t/10) % 3 * 2, (t/10) % 3,      1, (-t/10) % 10, (t/10) % 10, 1, 1, 0, ryzhiy);
+        PaintCat (400, 450, 1.2, 1.2, (t/10) % 2 * 5, (t/9)  % 5*(-1), 1, (-t/5)  % 10, (t/5)  % 10, 1, 1, 0, brown);
 
         t++;
         txSleep (100);
@@ -119,10 +124,14 @@ void MoveCipaWalking_2()
         PaintCipa ( 420 - 1*t,   560 + 0.2*t, 0.8, 0.8, 1, ((t/10) % 2*2-1)*5,   (t/10) % 2*(-5), -1,        0);
         PaintCipa (-40  + 1.5*t, 420 + 0.8*t, 0.8, 0.8, 1, ((t/10) % 2*2-1)*5,   (t/10) % 2*(-5),  1,        0);
 
+        PaintCat (750 + 0.5*t, 440, 0.7, 0.9, 1, 1, 1, (-t/10) % 10, (t/10) % 10, ((t/10) % 2*2-1)*5, (t/10) % 2*(-5), 0,                      ryzhiy);
+        PaintCat (400,         450, 1.2, 1.2, 1, 1, 1, (-t/5)  % 10, (t/5)  % 10,                  1,               1, ((t/10) %2 * 2 - 1)*30, brown);
+
         t++;
         txSleep (200);
         }
     }
+
 void MoveCipaWalking_3()
     {
     for (int t = 300; t <= 350; t += 2)
@@ -150,6 +159,9 @@ void MoveCipaWalking_3()
         PaintCipa ( 332,         600,         0.8, 0.8,       1,                      0,                 0,       - 1, t%2 * 10);
         PaintCipa (-30  + 0.5*t, 530 + 0.3*t, 0.8, 0.8,       1, ((t/10) % 2 * 2 - 1)*5, (t/10) % 2 * (-5),         1,        0);
         PaintCipa (-40  + 1.5*t, 540 + 0.4*t, 0.8, 0.8,       1, ((t/10) % 2 * 2 - 1)*5, (t/10) % 2 * (-5), t%2*2 - 1,        0);
+
+        PaintCat (750 + 0.5*t, 440,         0.7,  0.9, 1, 1, 1, (-t/10) % 10, (t/10) % 10, ((t/10) % 2*2-1)* 5, (t/10) % 2* (-5),                      0, ryzhiy);
+        PaintCat (250 + 0.5*t, 510 - 0.2*t, 1.2,  1.2, 1, 1, 1, (-t/5)  % 10, (t/5)  % 10, ((t/10) % 2*2-1)*10, (t/10) % 2*(-10), ((t/10) %2 * 2 - 1)*30,  brown);
 
         t++;
         txSleep (200);
@@ -188,6 +200,14 @@ void FellAppl_4()
         PaintCipa (145, 635, 0.8, 0.8, 1,    0, 0,  1, 0);
         PaintCipa (485, 680, 0.8, 0.8, 1,    0, 0,  1, 0);
 
+        PaintCat (925 + 2*t, 440, 0.7,  0.9, 1, 1, 1, (-t/10) % 10, (t/10) % 10, ((t/10) % 2*2-1)* 5, (t/10) % 2* (-5),                      0, ryzhiy);
+        PaintCat (425 - 2*t, 440, 1.2,  1.2, 1, 1, 1, (-t/5)  % 10, (t/5)  % 10, ((t/10) % 2*2-1)*10, (t/10) % 2*(-10), ((t/10) %2 * 2 - 1)*30,  brown);
+
+        PaintTree (200, 370, 1.2);
+        PaintTree (100, 380, 1.7);
+        PaintTree (1200, 450, 0.8);
+        PaintTree (1050, 425, 0.8);
+
         t++;
         txSleep (50);
         }
@@ -211,6 +231,10 @@ void FellAppl_4()
         PaintCipa (334, 600, 0.8, 0.8, 1,    0, 0,  1, 0);
         PaintCipa (145, 635, 0.8, 0.8, 1,    0, 0,  1, 0);
         PaintCipa (485, 680, 0.8, 0.8, 1,    0, 0,  1, 0);
+
+        PaintCat (  25 - 2*t, 440, 1.2,  1.2, 1, 1, 1, (-t/5)  % 10, (t/5)  % 10, ((t/10) % 2*2-1)*10, (t/10) % 2*(-10), ((t/10) %2 * 2 - 1)*30,  brown);
+        PaintTree (200, 370, 1.2);
+        PaintTree (100, 380, 1.7);
 
         t++;
         txSleep (50);
@@ -462,47 +486,52 @@ void PaintAppl(int x, int y, double sizeAppl)
     txSetFillColor (RGB (255,   0,   0));
     txCircle (x, y, 10*sizeAppl);
     }
-void PaintCat (int x, int y)
+
+void PaintCat (int x, int y, double sizeX, double sizeY, int nose,
+               int glazCatZrachek, double sizeGlazCat,
+               int LeftYho, int RightYho, int LeftNogaCat, int RightNogaCat, int khvost, int color)
     {
-    txSetColor     (RGB (255, 115,  50));         //голова кота
-    txSetFillColor (RGB (255, 115,  50));
-    txCircle (x, y - 70, 30);
+    txSetColor     (color);                                     //голова кота
+    txSetFillColor (color);
+    txCircle (x, y - 70*sizeY, 30*sizeY);
 
-    txSetColor     (RGB (255, 115,  50));         //уши кота
-    txSetFillColor (RGB (255, 115,  50));
-    POINT triangleLeftYho [] = {{x - 30, y - 80}, {x - 35, y - 115}, {x - 5, y - 95}}; txPolygon (triangleLeftYho, 3);
-    POINT triangleRightYho[] = {{x + 25, y - 80}, {x + 30, y - 115}, {x,     y - 95}}; txPolygon (triangleRightYho,3);
+    txSetColor     (color);                                     //уши кота
+    txSetFillColor (color);
+    POINT triangleLeftYho [] = {{x - 30*sizeX, y - 80*sizeY}, {x - 35*sizeX +  LeftYho, y - 115*sizeY}, {x - 5*sizeX, y - 95*sizeY}}; txPolygon (triangleLeftYho, 3);
+    POINT triangleRightYho[] = {{x + 25*sizeX, y - 80*sizeY}, {x + 30*sizeX + RightYho, y - 115*sizeY}, {x,           y - 95*sizeY}}; txPolygon (triangleRightYho,3);
 
-    txSetColor     (RGB (255, 115, 50), 25);     //тело кота
-    txLine   (x, y - 20, x, y - 70);
+    txSetColor     (color, 25*sizeY);                           //тело кота
+    txLine   (x, y - 20*sizeY, x, y - 70*sizeY);
 
-    txSetColor     (RGB (255, 115, 50), 10);     //хвост кота
-    txArc    (x - 50, y - 70, x, y - 20, 180, 170);
+    txSetColor     (color, 10*sizeY);                           //хвост кота
+    txArc    (x - 50*sizeX, y - 70*sizeY, x, y - 20*sizeY, 180 + khvost, 170);
 
     txSetColor     (RGB (  0,   0,   0));
     txSetFillColor (RGB (255, 255, 250));
-    txEllipse (x - 25, y - 25, x,      y);             //лапы кота
-    txEllipse (x,      y - 25, x + 25, y);
+    txEllipse (x - 25*sizeX, y - 25*sizeY +  LeftNogaCat, x,            y +  LeftNogaCat);    //лапы кота
+    txEllipse (x,            y - 25*sizeY + RightNogaCat, x + 25*sizeX, y + RightNogaCat);
 
-    txEllipse (x - 25, y - 95, x,      y - 70);          //глаза кота
-    txEllipse (x,      y - 95, x + 25, y - 70);
+    txEllipse (x - 25*sizeX + sizeGlazCat*sizeY, y - 95*sizeY + sizeGlazCat*sizeY,            //глаза кота
+               x,                                y - 70*sizeY - sizeGlazCat*sizeY);
+    txEllipse (x,                                y - 95*sizeY + sizeGlazCat*sizeY,
+               x + 25*sizeX - sizeGlazCat*sizeY, y - 70*sizeY - sizeGlazCat*sizeY);
 
     txSetColor     (RGB (  0,   0,  0));
     txSetFillColor (RGB (  0,   0,  0));
-    txEllipse (x - 15, y - 92, x - 10, y - 75);
-    txEllipse (x + 10, y - 92, x + 15, y - 75);
-                                                 //нос кота
-    POINT triangleNose[] = {{x - 5, y - 70}, {x, y - 65}, {x + 5, y - 70}}; txPolygon (triangleNose,3);
-    txLine (x - 40, y - 70, x -  5, y - 65);
-    txLine (x - 45, y - 63, x -  5, y - 63);
-    txLine (x - 40, y - 55, x -  5, y - 61);
-    txLine (x +  5, y - 65, x + 40, y - 70);
-    txLine (x +  5, y - 63, x + 45, y - 63);
-    txLine (x +  5, y - 61, x + 40, y - 55);
+    txEllipse (x - 15*sizeX + glazCatZrachek, y - 92*sizeY + sizeGlazCat, x - 10*sizeX + glazCatZrachek, y - 75*sizeY - sizeGlazCat);
+    txEllipse (x + 10*sizeX + glazCatZrachek, y - 92*sizeY + sizeGlazCat, x + 15*sizeX + glazCatZrachek, y - 75*sizeY - sizeGlazCat);
+                                                                                      //нос кота
+    POINT triangleNose[] = {{x - 5*sizeX, y - 70*sizeY + nose}, {x, y - 65*sizeY + nose}, {x + 5*sizeX, y - 70*sizeY + nose}}; txPolygon (triangleNose,3);
+    txLine (x - 40*sizeX, y - 70*sizeY + nose, x -  5*sizeX, y - 65*sizeY + nose);    //усы кота
+    txLine (x - 45*sizeX, y - 63*sizeY + nose, x -  5*sizeX, y - 63*sizeY + nose);
+    txLine (x - 40*sizeX, y - 55*sizeY + nose, x -  5*sizeX, y - 61*sizeY + nose);
+    txLine (x +  5*sizeX, y - 65*sizeY + nose, x + 40*sizeX, y - 70*sizeY + nose);
+    txLine (x +  5*sizeX, y - 63*sizeY + nose, x + 45*sizeX, y - 63*sizeY + nose);
+    txLine (x +  5*sizeX, y - 61*sizeY + nose, x + 40*sizeX, y - 55*sizeY + nose);
 
-    txSetColor     (RGB (255, 0, 0));         //язык кота
+    txSetColor     (RGB (255, 0, 0));                                          //язык кота
     txSetFillColor (RGB (255, 0, 0));
-    txPie (x - 5, y - 60, x + 5, y - 45, -20, 20);
+    txPie (x - 5*sizeX, y - 60*sizeY, x + 5*sizeX, y - 45*sizeY, -20, 20);
     }
 
 //------------------------------------------------------------------------------------------------------------
