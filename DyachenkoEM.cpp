@@ -1,12 +1,11 @@
-// {=============================================== =============================
+// {=====================================================================================
 //! @brief      Cartoon "Chickens for a walk"
 //!
 //!             My First Cartoon in Learning C ++
 //!
 //! @date       2021
 //! @author     Dyachenko Ekaterina Mikhailovna, teacher of informatics, Nefteyugansk
-//
-//} =============================================== =============================
+//} =====================================================================================
 
 #include "TXlib.h"
 
@@ -20,10 +19,11 @@ void PaintKura      (int x, int y, double sizeX, double sizeY, int glazKyra,
                      int LeftNogaKura, int RightNogaKura, int LR, int OpenKluv, int flap);
 void PaintGysen     (int x, int y, double sizeX, double sizeY, double sizeGlazGysen, int LR);
 void PaintAppl      (int x, int y, double sizeAppl);
-void PaintOblako    (int x, int y, double size);
+void PaintOblako    (int x, int y, double size, int color);
 void PaintCat       (int x, int y, double sizeX, double sizeY, int nose,
                      int glazCatZrachek, double sizeGlazCat,
-                     int LeftYho, int RightYho, int LeftNogaCat, int RightNogaCat, int khvost, int color);
+                     int LeftYho, int RightYho, int LeftNogaCat, int RightNogaCat,
+                     int khvost, int color);
 void StartTitles();
 void MoveKyraVedetCip_1();
 void MoveCipaWalking_2();
@@ -31,10 +31,14 @@ void MoveCipaWalking_3();
 void FellAppl_4();
 void VhodGysen_5();
 void PobegGysen_6();
+void PlayCat_7();
 void FinishTitles();
 
-const int ryzhiy = (RGB (255, 115, 50));
-      int brown  = (RGB (181,  90, 50));
+const int ryzhiy    = (RGB (255, 115,  50));
+      int brown     = (RGB (181,  90,  50));
+      int pale_blue = (RGB (200, 255, 255));
+      int turqoise  = (RGB (227, 255, 255));
+      int lilac     = (RGB (230, 205, 255));
 
 int main()
     {
@@ -49,6 +53,7 @@ int main()
     FellAppl_4();
     VhodGysen_5();
     PobegGysen_6();
+    PlayCat_7();
 
     FinishTitles();
 
@@ -74,11 +79,11 @@ void MoveKyraVedetCip_1()
         txSelectFont ("Cambria", 50);
         txTextOut (300, 700, "Мама курица ведет цыплят гулять.");
 
-        PaintOblako ( 200 - 0.5*t,  70,   1);
-        PaintOblako (1100 - 0.5*t, 150, 0.8);
-        PaintOblako ( 700 - 0.5*t,  80,   1);
-        PaintOblako ( 400 - 0.5*t, 100, 1.2);
-        PaintOblako ( 900 - 0.5*t,  60, 0.7);
+        PaintOblako ( 200 - 0.5*t,  70,   1, pale_blue);
+        PaintOblako (1100 - 0.5*t, 150, 0.8, turqoise);
+        PaintOblako ( 700 - 0.5*t,  80,   1, pale_blue);
+        PaintOblako ( 400 - 0.5*t, 100, 1.2, turqoise);
+        PaintOblako ( 900 - 0.5*t,  60, 0.7, lilac);
 
         PaintKura ( 40  + 2*t, 520,  1.2, 1.2, t/10%10, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2 *(-5), -1, 0, t%2 * 5);
         PaintCipa (-30  + 2*t, 580,  0.8, 0.8,       1, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2 *(-5),  1, 0);
@@ -110,11 +115,11 @@ void MoveCipaWalking_2()
         txSelectFont ("Cambria", 50);
         txTextOut (300, 700, "-Гулять это хорошоооо.");
 
-        PaintOblako ( 300 - t,  70,   1);
-        PaintOblako (1200 - t, 150, 0.8);
-        PaintOblako ( 800 - t,  80,   1);
-        PaintOblako ( 500 - t, 100, 1.2);
-        PaintOblako (1000 - t,  60, 0.7);
+        PaintOblako ( 300 - t,  70,   1, pale_blue);
+        PaintOblako (1200 - t, 150, 0.8, turqoise);
+        PaintOblako ( 800 - t,  80,   1, pale_blue);
+        PaintOblako ( 500 - t, 100, 1.2, turqoise);
+        PaintOblako (1000 - t,  60, 0.7, lilac);
 
         PaintKura ( 440,         520,         1.2, 1.2, 0,                  0,                 0, -1,        0, t%2 * 5);
         PaintCipa (-30  + 2*t,   580 - 0.1*t, 0.8, 0.8, 1, ((t/10) % 2*2-1)*5,   (t/10) % 2*(-5),  1,        0);
@@ -146,11 +151,11 @@ void MoveCipaWalking_3()
         txSelectFont ("Cambria", 50);
         txTextOut (300, 700, "-А хоррррошоооо гулять это Еещёё лучше.");
 
-        PaintOblako ( 300 - t,  70,   1);
-        PaintOblako (1200 - t, 150, 0.8);
-        PaintOblako ( 800 - t,  80,   1);
-        PaintOblako ( 500 - t, 100, 1.2);
-        PaintOblako (1000 - t,  60, 0.7);
+        PaintOblako ( 300 - t,  70,   1, pale_blue);
+        PaintOblako (1200 - t, 150, 0.8, turqoise);
+        PaintOblako ( 800 - t,  80,   1, pale_blue);
+        PaintOblako ( 500 - t, 100, 1.2, turqoise);
+        PaintOblako (1000 - t,  60, 0.7, lilac);
 
         PaintKura ( 440,         520,         1.2, 1.2, t/10%10,                      0,                 0,         1,        0, t%2 * 5);
         PaintCipa ( 570,         550,         0.8, 0.8,       1,                      0,                 0, t%2*2 - 1,        0);
@@ -184,11 +189,11 @@ void FellAppl_4()
         txSelectFont ("Cambria", 50);
         txTextOut (300, 700, "-Ой!   -Ой!   -Ой!");
 
-        PaintOblako (-50 - t*0.1,  70,   1);
-        PaintOblako (850 - t*0.1, 150, 0.8);
-        PaintOblako (450 - t*0.1,  80,   1);
-        PaintOblako (150 - t*0.1, 100, 1.2);
-        PaintOblako (650 - t*0.1,  60, 0.7);
+        PaintOblako (-50 - t*0.1,  70,   1, pale_blue);
+        PaintOblako (850 - t*0.1, 150, 0.8, turqoise);
+        PaintOblako (450 - t*0.1,  80,   1, pale_blue);
+        PaintOblako (150 - t*0.1, 100, 1.2, turqoise);
+        PaintOblako (650 - t*0.1,  60, 0.7, lilac);
 
         PaintAppl (820 - t*0.2,  300 + t, 1);
 
@@ -216,11 +221,11 @@ void FellAppl_4()
         {
         PaintBackground();
 
-        PaintOblako (-70 - t*0.2,  70,   1);
-        PaintOblako (830 - t*0.2, 150, 0.8);
-        PaintOblako (430 - t*0.2,  80,   1);
-        PaintOblako (130 - t*0.2, 100, 1.2);
-        PaintOblako (630 - t*0.2,  60, 0.7);
+        PaintOblako (-70 - t*0.2,  70,   1, pale_blue);
+        PaintOblako (830 - t*0.2, 150, 0.8, turqoise);
+        PaintOblako (430 - t*0.2,  80,   1, pale_blue);
+        PaintOblako (130 - t*0.2, 100, 1.2, turqoise);
+        PaintOblako (630 - t*0.2,  60, 0.7, lilac);
 
         PaintAppl(780 - t*0.2, 500 + t, 1 + t*0.01);
 
@@ -255,13 +260,13 @@ void VhodGysen_5()
         txSelectFont ("Cambria", 50);
         txTextOut (500, 700, "-ААА,   ЧТО ЭТО???");
 
-        PaintOblako ( -90 - t*0.2,  70,   1);
-        PaintOblako ( 810 - t*0.2, 150, 0.8);
-        PaintOblako ( 410 - t*0.2,  80,   1);
-        PaintOblako ( 110 - t*0.2, 100, 1.2);
-        PaintOblako ( 610 - t*0.2,  60, 0.7);
-        PaintOblako (1340 - t*0.2, 100, 0.9);
-        PaintOblako (1440 - t*0.2,  60, 0.8);
+        PaintOblako ( -90 - t*0.2,  70,   1, pale_blue);
+        PaintOblako ( 810 - t*0.2, 150, 0.8, turqoise);
+        PaintOblako ( 410 - t*0.2,  80,   1, pale_blue);
+        PaintOblako ( 110 - t*0.2, 100, 1.2, turqoise);
+        PaintOblako ( 610 - t*0.2,  60, 0.7, lilac);
+        PaintOblako (1340 - t*0.2, 100, 0.9, lilac);
+        PaintOblako (1440 - t*0.2,  60, 0.8, turqoise);
 
         PaintGysen (745 - t*0.5, 600 + t*0.2, 1, 1, 1, 1);
         PaintAppl  (760, 600, 2);
@@ -307,12 +312,12 @@ void PobegGysen_6()
         txSelectFont ("Cambria", 50);
         txTextOut (500, 700, "- Лови его!     - Поиграем!     - Хватай! ");
 
-        PaintOblako ( 770 - t*0.2, 150, 0.8);
-        PaintOblako ( 370 - t*0.2,  80,   1);
-        PaintOblako (  70 - t*0.2, 100, 1.2);
-        PaintOblako ( 570 - t*0.2,  60, 0.7);
-        PaintOblako (1300 - t*0.2, 100, 0.9);
-        PaintOblako (1400 - t*0.2,  60, 0.8);
+        PaintOblako ( 770 - t*0.2, 150, 0.8, turqoise);
+        PaintOblako ( 370 - t*0.2,  80,   1, pale_blue);
+        PaintOblako (  70 - t*0.2, 100, 1.2, turqoise);
+        PaintOblako ( 570 - t*0.2,  60, 0.7, lilac);
+        PaintOblako (1300 - t*0.2, 100, 0.9, lilac);
+        PaintOblako (1400 - t*0.2,  60, 0.8, turqoise);
 
         PaintGysen (670 + 3*t, 640, 1, 1, 2, -1);
         PaintAppl  (760, 600, 2);
@@ -330,12 +335,53 @@ void PobegGysen_6()
         }
     }
 
+void PlayCat_7 ()
+    {
+    for (int t = 0; t <= 150; t += 2)
+        {
+        PaintBackground();
+
+        PaintCat (0 + t*5, 570 + ((t/10) %2 * 2 - 1)*30, 1.2,  1.2, 1, (t/10) % 5*(-1), 1, (-t/5) % 10, (t/5)  % 10, ((t/10) % 2*2-1)*10, (t/10) % 2*(-10), ((t/10) %2 * 2 - 1)*30,  brown);
+        PaintAppl (760, 600, 2);
+
+        PaintOblako ( 650 - t*0.2, 150, 0.8, turqoise);
+        PaintOblako ( 250 - t*0.2,  80,   1, pale_blue);
+        PaintOblako ( -50 - t*0.2, 100, 1.2, turqoise);
+        PaintOblako ( 450 - t*0.2,  60, 0.7, lilac);
+        PaintOblako (1180 - t*0.2, 100, 0.9, lilac);
+        PaintOblako (1280 - t*0.2,  60, 0.8, turqoise);
+
+
+        t++;
+        txSleep (100);
+        }
+
+    for (int t = 1; t <= 160; t += 2)
+        {
+        PaintBackground();
+
+        PaintCat  (750 - t*5,  600, 1.2, 1.2, 1, (t/10) % 5*(-1), t%10, (-t/5) % 10, (t/5) % 10, ((t/10) % 2*2-1)*10, (t/10) % 2*(-10), ((t/10) %2 * 2 - 1)*30,  brown);
+        PaintAppl (760 - t*10, 600 + ((t/10) %2 * 2 - 1)*20, 2);
+
+        PaintOblako ( 629 - t*0.2, 150, 0.8, turqoise);
+        PaintOblako ( 229 - t*0.2,  80,   1, pale_blue);
+        PaintOblako ( -71 - t*0.2, 100, 1.2, turqoise);
+        PaintOblako ( 429 - t*0.2,  60, 0.7, lilac);
+        PaintOblako (1159 - t*0.2, 100, 0.9, lilac);
+        PaintOblako (1259 - t*0.2,  60, 0.8, turqoise);
+
+        t++;
+        txSleep (100);
+        }
+    }
 //------------------------------------------------------------------------------------------------------------
 
 void PaintBackground()
     {
+    txSetColor     (RGB (108, 236, 214));
     txSetFillColor (RGB (108, 236, 214));
     txClear();
+    txSetColor     (RGB (51, 255, 102));
     txSetFillColor (RGB (51, 255, 102));
     txRectangle (0, 300, 1280, 800);
 
@@ -469,10 +515,10 @@ void PaintGysen (int x, int y, double sizeX, double sizeY, double sizeGlazGus, i
     txCircle (x - 2*LR, y, 2*sizeGlazGus);
     }
 
-void PaintOblako (int x, int y, double size)
+void PaintOblako (int x, int y, double size, int color)
     {
-    txSetColor     (RGB (255, 255, 255));
-    txSetFillColor (RGB (255, 255, 255));
+    txSetColor     (color);
+    txSetFillColor (color);
     txCircle (x,           y,           40*size);
     txCircle (x - 50*size, y,           40*size);
     txCircle (x + 50*size, y,           40*size);
@@ -545,11 +591,11 @@ void StartTitles()
         txClear();
         PaintBackground();
 
-        PaintOblako ( 200,  70,   1);
-        PaintOblako (1100, 150, 0.8);
-        PaintOblako ( 700,  80,   1);
-        PaintOblako ( 400, 100, 1.2);
-        PaintOblako ( 900,  60, 0.7);
+        PaintOblako ( 200,  70,   1, pale_blue);
+        PaintOblako (1100, 150, 0.8, turqoise);
+        PaintOblako ( 700,  80,   1, pale_blue);
+        PaintOblako ( 400, 100, 1.2, turqoise);
+        PaintOblako ( 900,  60, 0.7, lilac);
 
         txSetColor (TX_WHITE);
         txSelectFont ("Cambria", 200);
@@ -577,12 +623,11 @@ void FinishTitles()
         txClear();
         PaintBackground();
 
-        PaintOblako ( 650 - t*0.5, 150, 0.8);
-        PaintOblako ( 250 - t*0.5,  80,   1);
-        PaintOblako ( -50 - t*0.5, 100, 1.2);
-        PaintOblako ( 450 - t*0.5,  60, 0.7);
-        PaintOblako (1180 - t*0.5, 100, 0.9);
-        PaintOblako (1280 - t*0.5,  60, 0.8);
+        PaintOblako ( 597 - t*0.2, 150, 0.8, turqoise);
+        PaintOblako ( 197 - t*0.2,  80,   1, pale_blue);
+        PaintOblako ( 397 - t*0.2,  60, 0.7, lilac);
+        PaintOblako (1127 - t*0.2, 100, 0.9, lilac);
+        PaintOblako (1227 - t*0.2,  60, 0.8, turqoise);
 
         txSetColor (TX_WHITE);
         txSelectFont ("Cambria", 70);
