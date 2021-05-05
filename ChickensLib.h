@@ -5,6 +5,33 @@
 //!
 //! @date       2021
 //! @author     Dyachenko Ekaterina Mikhailovna, teacher of informatics, Nefteyugansk
+//!
+//! @mainpage
+//!
+//!
+//!
+//! @defgroup Scenery
+//!
+//!             Functions
+//!           - @ref PaintAppleTree  ()
+//!           - @ref PaintTree       ()
+//!           - @ref PaintSpruce     ()
+//!           - @ref PaintOblako     ()
+//!           - @ref PaintBackground ()
+//!
+//! @defgroup Animals
+//!
+//!             Functions
+//!           - @ref PaintCipa  ()
+//!           - @ref PaintKura  ()
+//!           - @ref PaintGysen ()
+//!           - @ref PaintCat   ()
+//!
+//! @defgroup Other
+//!
+//!             Functions
+//!           - @ref PaintAppl ()
+//!
 //} =====================================================================================
 
 #include "TXlib.h"
@@ -13,9 +40,9 @@ void PaintBackground();
 void PaintAppleTree (int x, int y);
 void PaintTree      (int x, int y, double size);
 void PaintSpruce    (int x, int y, double sizeX, double sizeY, double veter);
-void PaintCipa      (int x, int y, double sizeX, double sizeY, double glazCipa,
+void PaintCipa      (int x, int y, double size, double glazCipa,
                      int LeftNogaCipa, int RightNogaCipa, int LR, int OpenKluv);
-void PaintKura      (int x, int y, double sizeX, double sizeY, int glazKyra,
+void PaintKura      (int x, int y, double size, int glazKura,
                      int LeftNogaKura, int RightNogaKura, int LR, int OpenKluv, int flap);
 void PaintGysen     (int x, int y, double sizeX, double sizeY, double sizeGlazGysen, int LR);
 void PaintAppl      (int x, int y, double sizeAppl);
@@ -68,6 +95,21 @@ void PaintBackground()
     PaintTree (1050, 425, 0.8);
     }
 
+//{=========================================================================================================
+//! Рисуем дерево Яблоня
+//!
+//! @param x     - x координата верхней части ствола дерева (центр рисунка дерева)
+//! @param y     - y координата верхней части ствола дерева (центр рисунка дерева)
+//!
+//! @par Пример использования
+//!
+//! @code
+//!        PaintAppleTree (125, 210);
+//!
+//! @endcode
+//!
+//}=========================================================================================================
+
 void PaintAppleTree (int x, int y)
     {
     txSetColor     (RGB (136,   0,  21), 25);
@@ -86,6 +128,22 @@ void PaintAppleTree (int x, int y)
     txCircle (x + 50, y - 50,  10);
     }
 
+//{=========================================================================================================
+//! Рисуем лиственное дерево
+//!
+//! @param x     - x координата верхней части ствола дерева (центр рисунка дерева)
+//! @param y     - y координата верхней части ствола дерева (центр рисунка дерева)
+//! @param size  - размер дерева. Если параметр равен 1, то размер дерева примерно (200 на 350 пикселей)
+//!
+//! @par Пример использования
+//!
+//! @code
+//!        PaintTree (100, 200, 1);
+//!
+//! @endcode
+//!
+//}=========================================================================================================
+
 void PaintTree (int x, int y, double size)
     {
     txSetColor     (RGB (136,   0,  21), 15*size);
@@ -100,6 +158,26 @@ void PaintTree (int x, int y, double size)
     txCircle (x + 20*size, y -  30*size, 50*size);
     }
 
+//{=========================================================================================================
+//! Рисуем дерево Ель
+//!
+//! @param x      - x координата верхней части ствола дерева (центр рисунка дерева)
+//! @param y      - y координата верхней части ствола дерева (центр рисунка дерева)
+//! @param sizeX  - размер дерева по ширине. Если параметр равен 1, то ширина дерева примерно 180 пикселей
+//! @param sizeY  - размер дерева по высоте. Если параметр равен 1, то высота дерева примерно 180 пикселей
+//! @param veter  - ветер качает дерево ("0" - нет ветра; "-20" - наклон налево; "+30" - наклон направо)
+//!
+//! @par Пример использования
+//!
+//! @code
+//!        PaintSpruce (100, 150, 1,     1,   0);
+//!        PaintSpruce (500, 300, 0.5, 0.8, -20);
+//!        PaintSpruce (700, 270, 1.3, 1.4, +30);
+//!
+//! @endcode
+//!
+//}=========================================================================================================
+
 void PaintSpruce (int x, int y, double sizeX, double sizeY, double veter)
     {
     txSetColor     (RGB (136,   0,  21), 15*sizeX);
@@ -112,55 +190,102 @@ void PaintSpruce (int x, int y, double sizeX, double sizeY, double veter)
     POINT triangle3[] = {{x - 40*sizeX, y - 80*sizeY}, {x + veter, y - 120*sizeY}, {x + 40*sizeX, y - 80*sizeY}}; txPolygon (triangle3,3);
     }
 
-void PaintCipa (int x, int y, double sizeX, double sizeY, double glazCipa,
+//{=========================================================================================================
+//! Рисуем Цыпленка
+//!
+//! @param x              - x координата центра тела Цыпленка
+//! @param y              - y координата центра тела Цыпленка
+//! @param size           - размер Цыпленка. Если параметр равен 1 (это норма), размер Цыпленка примерно 40 на 45 пикселей
+//! @param glazCipa       - размер глаза Цыпленка. Если параметр равен 1 (это норма), параметр дает возможность Цыпленку прищуриться или вытаращить глаза
+//! @param LeftNogaCipa   - расположение левой ноги Цыпленка. Если парамерт равен 0, то Цыпленок стоит (не шагает)
+//! @param RightNogaCipa  - расположение правой ноги Цыпленка. Если парамерт равен 0, то Цыпленок стоит (не шагает)
+//! @param LR             - направление в которое повернут Цыпленок. "1" - Цыпленок смотрит направо, "-1" - Цыпленок смотрит налево
+//! @param OpenKluv       - клюв Цыпленка можно открыть или закрыть. "0" - клюв закрыт, "10" - клюв открыт широко. Желательно менять значения от 0 до 10, но это не обязательно.
+//!
+//! @par Пример использования
+//!
+//! @code
+//!        PaintCipa (25, 25, 1, 1, 0, 0, 1, 10);   // цыпленок размера 40 на 45 пикселей, спокойно стоит, смотрит вправо, но у него открыт клюв.
+//!
+//!        PaintCipa (10  + 2*t, 600 + 0.1*t, 0.8, 1, ((t/10) % 2*2-1)*5, (t/10) % 2*(-5), t%2*2 - 1, t%2 * 10);  //цыпленок меньше своего стандартного размера, шагает по диагонали, смотрит в разные стороны и разговаривает
+//!
+//! @endcode
+//!
+//}=========================================================================================================
+
+void PaintCipa (int x, int y, double size, double glazCipa,
                 int LeftNogaCipa, int RightNogaCipa, int LR, int OpenKluv)
     {
     txSetColor     (RGB (255, 247,  85));
     txSetFillColor (RGB (255, 247,  85));
-    txCircle (x, y, 20*sizeY);
+    txCircle (x, y, 20*size);
 
     txSetColor     (RGB (255,   0,   0));
     txSetFillColor (RGB (255,   0,   0));
-    POINT triangleLeftNogaCipa [] = {{x - 10*sizeX *LR, y + 17*sizeY + LeftNogaCipa}, {x -  5*sizeX *LR, y + 25*sizeY + LeftNogaCipa}, {x - 15*sizeX *LR, y + 25*sizeY + LeftNogaCipa}}; txPolygon (triangleLeftNogaCipa, 3);
-    POINT triangleRightNogaCipa[] = {{x + 10*sizeX *LR, y + 17*sizeY +RightNogaCipa}, {x + 15*sizeX *LR, y + 25*sizeY +RightNogaCipa}, {x +  5*sizeX *LR, y + 25*sizeY +RightNogaCipa}}; txPolygon (triangleRightNogaCipa,3);
-    POINT triangleKlyuvCipa    [] = {{x + 19*sizeX *LR, y -  5*sizeY},                {x + 25*sizeX *LR, y - 10*sizeY + OpenKluv},     {x + 15*sizeX *LR, y - 11*sizeY}};                txPolygon (triangleKlyuvCipa,    3);
-    POINT triangleKlyuvCipaOpen[] = {{x + 19*sizeX *LR, y -  5*sizeY},                {x + 25*sizeX *LR, y - 10*sizeY - OpenKluv},     {x + 15*sizeX *LR, y - 11*sizeY}};                txPolygon (triangleKlyuvCipaOpen,3);
+    POINT triangleLeftNogaCipa [] = {{x - 10*size *LR, y + 17*size + LeftNogaCipa}, {x -  5*size *LR, y + 25*size + LeftNogaCipa}, {x - 15*size *LR, y + 25*size + LeftNogaCipa}}; txPolygon (triangleLeftNogaCipa, 3);
+    POINT triangleRightNogaCipa[] = {{x + 10*size *LR, y + 17*size +RightNogaCipa}, {x + 15*size *LR, y + 25*size +RightNogaCipa}, {x +  5*size *LR, y + 25*size +RightNogaCipa}}; txPolygon (triangleRightNogaCipa,3);
+    POINT triangleKlyuvCipa    [] = {{x + 19*size *LR, y -  5*size},                {x + 25*size *LR, y - 10*size + OpenKluv},     {x + 15*size *LR, y - 11*size}};                txPolygon (triangleKlyuvCipa,    3);
+    POINT triangleKlyuvCipaOpen[] = {{x + 19*size *LR, y -  5*size},                {x + 25*size *LR, y - 10*size - OpenKluv},     {x + 15*size *LR, y - 11*size}};                txPolygon (triangleKlyuvCipaOpen,3);
 
     txSetColor     (RGB (  0,   0,   0));
     txSetFillColor (RGB (255, 255, 255));
-    txCircle (x + 5*sizeX *LR, y - 7*sizeY, 5*sizeY *glazCipa);
+    txCircle (x + 5*size *LR, y - 7*size, 5*size *glazCipa);
 
     txSetFillColor (RGB (  0,   0,   0));
-    txCircle (x + 6*sizeX *LR, y - 7*sizeY, 2*sizeY *glazCipa);
+    txCircle (x + 6*size *LR, y - 7*size, 2*size *glazCipa);
     }
 
-void PaintKura (int x, int y, double sizeX, double sizeY, int glazKura,
+//{=========================================================================================================
+//! Рисуем Куру
+//!
+//! @param x              - x координата центра тела Куры
+//! @param y              - y координата центра тела Куры
+//! @param size           - размер Куры. Если параметр равен 1 (это норма), размер Куры примерно 110 на 110 пикселей
+//! @param glazKura       - размер глаза Куры. Если параметр равен 1 (это норма), параметр дает возможность Курочке моргать, прищуриться или вытаращить глаза
+//! @param LeftNogaKura   - расположение левой ноги Куры. Если парамерт равен 0, то Кура стоит (не шагает)
+//! @param RightNogaKura  - расположение правой ноги Куры. Если парамерт равен 0, то Кура стоит (не шагает)
+//! @param LR             - направление в которое повернута Кура. "1" - Кура смотрит налево, "-1" - Кура смотрит направо
+//! @param OpenKluv       - клюв Куры можно открыть или закрыть. "0" - клюв закрыт, "10" - клюв открыт широко. Желательно менять значения от 0 до 10, но это не обязательно.
+//! @param flap           - крыло Куры, крылом можно махать. "0" - спокойное состояние, крыло сложено
+//!
+//! @par Пример использования
+//!
+//! @code
+//!        PaintKura (60, 60, 1, 1, 0, 0,  1, 0, 0);   // Кура размера 110 на 110 пикселей, спокойно стоит, смотрит налево, клюв закрыт.
+//!
+//!        PaintKura (440 + 2*t, 520, 1.2, t%10, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2 * (-5), -1, 0, t%2 * 15);  //Кура больше своего стандартного размера, шагает слева на право, смотрит направо (туда куда шагает), моргает глазами, клюв закрыт, крылом машет.
+//!
+//! @endcode
+//!
+//}=========================================================================================================
+
+void PaintKura (int x, int y, double size, int glazKura,
                 int LeftNogaKura, int RightNogaKura, int LR, int OpenKluv, int flap)
     {
     txSetColor     (RGB (255,   0,   0));
     txSetFillColor (RGB (255,   0,   0));
-    txCircle (x - 40*sizeX *LR, y - 44*sizeY, 10*sizeY);
-    txCircle (x - 30*sizeX *LR, y - 47*sizeY, 10*sizeY);
-    txCircle (x - 20*sizeX *LR, y - 44*sizeY, 10*sizeY);
+    txCircle (x - 40*size *LR, y - 44*size, 10*size);
+    txCircle (x - 30*size *LR, y - 47*size, 10*size);
+    txCircle (x - 20*size *LR, y - 44*size, 10*size);
 
     txSetColor     (RGB (  0,   0,   0));
     txSetFillColor (RGB (255, 255, 255));
-    txCircle (x,                y,            35*sizeY);
-    txCircle (x - 30*sizeX *LR, y - 30*sizeY, 18*sizeY);
-    txPie    (x - 20*sizeX *LR, y - 15*sizeY, x + 20*sizeX *LR, y + 15*sizeY + flap, -215*LR, 180 + flap);
+    txCircle (x,               y,           35*size);
+    txCircle (x - 30*size *LR, y - 30*size, 18*size);
+    txPie    (x - 20*size *LR, y - 15*size, x + 20*size *LR, y + 15*size + flap, -215*LR, 180 + flap);
 
     txSetColor     (RGB (  0,   0,   0));
     txSetFillColor (RGB (255, 255, 255));
-    txEllipse (x - 43*sizeX *LR, y - 40*sizeY + glazKura*sizeY, x - 33*sizeX *LR, y - 30*sizeY - glazKura*sizeY);
+    txEllipse (x - 43*size *LR, y - 40*size + glazKura*size, x - 33*size *LR, y - 30*size - glazKura*size);
     txSetFillColor (RGB (  0,   0,   0));
-    txCircle  (x - 39*sizeX *LR, y - 34*sizeY, 2*sizeY);
+    txCircle  (x - 39*size *LR, y - 34*size, 2*size);
 
     txSetColor     (RGB (255,   0,   0));
     txSetFillColor (RGB (255,   0,   0));
-    POINT triangleRightNogaKura[] = {{x + 10*sizeX *LR, y + 34*sizeY + LeftNogaKura}, {x + 15*sizeX *LR, y + 45*sizeY + LeftNogaKura}, {x +  5*sizeX *LR, y + 45*sizeY + LeftNogaKura}};  txPolygon (triangleRightNogaKura,3);
-    POINT triangleLeftNogaKura [] = {{x - 10*sizeX *LR, y + 34*sizeY +RightNogaKura}, {x -  5*sizeX *LR, y + 45*sizeY +RightNogaKura}, {x - 15*sizeX *LR, y + 45*sizeY +RightNogaKura}};  txPolygon (triangleLeftNogaKura, 3);
-    POINT triangleKlyuvKura    [] = {{x - 48*sizeX *LR, y - 30*sizeY},                {x - 54*sizeX *LR, y - 23*sizeY + OpenKluv},     {x - 45*sizeX *LR, y - 23*sizeY}};                 txPolygon (triangleKlyuvKura,    3);
-    POINT triangleKlyuvKuraOpen[] = {{x - 48*sizeX *LR, y - 30*sizeY},                {x - 54*sizeX *LR, y - 23*sizeY - OpenKluv},     {x - 45*sizeX *LR, y - 23*sizeY}};                 txPolygon (triangleKlyuvKuraOpen,3);
+    POINT triangleRightNogaKura[] = {{x + 10*size *LR, y + 34*size + LeftNogaKura}, {x + 15*size *LR, y + 45*size + LeftNogaKura}, {x +  5*size *LR, y + 45*size + LeftNogaKura}};  txPolygon (triangleRightNogaKura,3);
+    POINT triangleLeftNogaKura [] = {{x - 10*size *LR, y + 34*size +RightNogaKura}, {x -  5*size *LR, y + 45*size +RightNogaKura}, {x - 15*size *LR, y + 45*size +RightNogaKura}};  txPolygon (triangleLeftNogaKura, 3);
+    POINT triangleKlyuvKura    [] = {{x - 48*size *LR, y - 30*size},                {x - 54*size *LR, y - 23*size + OpenKluv},     {x - 45*size *LR, y - 23*size}};                 txPolygon (triangleKlyuvKura,    3);
+    POINT triangleKlyuvKuraOpen[] = {{x - 48*size *LR, y - 30*size},                {x - 54*size *LR, y - 23*size - OpenKluv},     {x - 45*size *LR, y - 23*size}};                 txPolygon (triangleKlyuvKuraOpen,3);
     }
 
 void PaintGysen (int x, int y, double sizeX, double sizeY, double sizeGlazGus, int LR)
