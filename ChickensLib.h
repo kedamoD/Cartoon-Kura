@@ -39,7 +39,7 @@
 void PaintBackground();
 void PaintAppleTree (int x, int y);
 void PaintTree      (int x, int y, double size);
-void PaintSpruce    (int x, int y, double sizeX, double sizeY, double veter);
+void PaintSpruce    (int x, int y, double sizeX, double sizeY, int veter);
 void PaintCipa      (int x, int y, double size, double glazCipa,
                      int LeftNogaCipa, int RightNogaCipa, int LR, int OpenKluv);
 void PaintKura      (int x, int y, double size, int glazKura,
@@ -146,16 +146,16 @@ void PaintAppleTree (int x, int y)
 
 void PaintTree (int x, int y, double size)
     {
-    txSetColor     (RGB (136,   0,  21), 15*size);
-    txLine (x, y, x, y + 100*size);
+    txSetColor     (RGB (136,   0,  21), (int) (15*size));
+    txLine (x, y, x, y + (int) (100*size));
 
     txSetColor     (RGB (  0, 128,   0), 5);
     txSetFillColor (RGB (  0, 210,   0));
-    txCircle (x + 30*size, y - 130*size, 40*size);
-    txCircle (x - 30*size, y -  90*size, 50*size);
-    txCircle (x + 30*size, y -  75*size, 50*size);
-    txCircle (x - 20*size, y -  50*size, 60*size);
-    txCircle (x + 20*size, y -  30*size, 50*size);
+    txCircle (x + (int) (30*size), y - (int) (130*size), (int) (40*size));
+    txCircle (x - (int) (30*size), y - (int) ( 90*size), (int) (50*size));
+    txCircle (x + (int) (30*size), y - (int) ( 75*size), (int) (50*size));
+    txCircle (x - (int) (20*size), y - (int) ( 50*size), (int) (60*size));
+    txCircle (x + (int) (20*size), y - (int) ( 30*size), (int) (50*size));
     }
 
 //{=========================================================================================================
@@ -178,16 +178,16 @@ void PaintTree (int x, int y, double size)
 //!
 //}=========================================================================================================
 
-void PaintSpruce (int x, int y, double sizeX, double sizeY, double veter)
+void PaintSpruce (int x, int y, double sizeX, double sizeY, int veter)
     {
-    txSetColor     (RGB (136,   0,  21), 15*sizeX);
-    txLine (x, y, x, y + 30*sizeX);
+    txSetColor     (RGB (136,   0,  21), (int) (15*sizeX));
+    txLine (x, y, x, y + (int) (30*sizeX));
 
-    txSetColor     (RGB (  0, 200,   0), 3*sizeX);
+    txSetColor     (RGB (  0, 200,   0), (int) (3*sizeX));
     txSetFillColor (RGB (  0, 150,   0));
-    POINT triangle1[] = {{x - 80*sizeX, y},            {x + veter, y -  60*sizeY}, {x + 80*sizeX, y}};            txPolygon (triangle1,3);
-    POINT triangle2[] = {{x - 60*sizeX, y - 40*sizeY}, {x + veter, y -  90*sizeY}, {x + 60*sizeX, y - 40*sizeY}}; txPolygon (triangle2,3);
-    POINT triangle3[] = {{x - 40*sizeX, y - 80*sizeY}, {x + veter, y - 120*sizeY}, {x + 40*sizeX, y - 80*sizeY}}; txPolygon (triangle3,3);
+    POINT triangle1[] = {{x - (int) (80*sizeX), y},                    {x + veter, y - (int)  (60*sizeY)}, {x + (int) (80*sizeX), y}};                    txPolygon (triangle1,3);
+    POINT triangle2[] = {{x - (int) (60*sizeX), y - (int) (40*sizeY)}, {x + veter, y - (int)  (90*sizeY)}, {x + (int) (60*sizeX), y - (int) (40*sizeY)}}; txPolygon (triangle2,3);
+    POINT triangle3[] = {{x - (int) (40*sizeX), y - (int) (80*sizeY)}, {x + veter, y - (int) (120*sizeY)}, {x + (int) (40*sizeX), y - (int) (80*sizeY)}}; txPolygon (triangle3,3);
     }
 
 //{=========================================================================================================
@@ -218,21 +218,21 @@ void PaintCipa (int x, int y, double size, double glazCipa,
     {
     txSetColor     (RGB (255, 247,  85));
     txSetFillColor (RGB (255, 247,  85));
-    txCircle (x, y, 20*size);
+    txCircle (x, y, (int) (20*size));
 
     txSetColor     (RGB (255,   0,   0));
     txSetFillColor (RGB (255,   0,   0));
-    POINT triangleLeftNogaCipa [] = {{x - 10*size *LR, y + 17*size + LeftNogaCipa}, {x -  5*size *LR, y + 25*size + LeftNogaCipa}, {x - 15*size *LR, y + 25*size + LeftNogaCipa}}; txPolygon (triangleLeftNogaCipa, 3);
-    POINT triangleRightNogaCipa[] = {{x + 10*size *LR, y + 17*size +RightNogaCipa}, {x + 15*size *LR, y + 25*size +RightNogaCipa}, {x +  5*size *LR, y + 25*size +RightNogaCipa}}; txPolygon (triangleRightNogaCipa,3);
-    POINT triangleKlyuvCipa    [] = {{x + 19*size *LR, y -  5*size},                {x + 25*size *LR, y - 10*size + OpenKluv},     {x + 15*size *LR, y - 11*size}};                txPolygon (triangleKlyuvCipa,    3);
-    POINT triangleKlyuvCipaOpen[] = {{x + 19*size *LR, y -  5*size},                {x + 25*size *LR, y - 10*size - OpenKluv},     {x + 15*size *LR, y - 11*size}};                txPolygon (triangleKlyuvCipaOpen,3);
+    POINT triangleLeftNogaCipa [] = {{x - (int) (10*size) *LR, y + (int) (17*size) + LeftNogaCipa}, {x - (int) ( 5*size) *LR, y + (int) (25*size) + LeftNogaCipa}, {x - (int) (15*size) *LR, y + (int) (25*size) + LeftNogaCipa}}; txPolygon (triangleLeftNogaCipa, 3);
+    POINT triangleRightNogaCipa[] = {{x + (int) (10*size) *LR, y + (int) (17*size) +RightNogaCipa}, {x + (int) (15*size) *LR, y + (int) (25*size) +RightNogaCipa}, {x + (int) ( 5*size) *LR, y + (int) (25*size) +RightNogaCipa}}; txPolygon (triangleRightNogaCipa,3);
+    POINT triangleKlyuvCipa    [] = {{x + (int) (19*size) *LR, y - (int) ( 5*size)},                {x + (int) (25*size) *LR, y - (int) (10*size) + OpenKluv},     {x + (int) (15*size) *LR, y - (int) (11*size)}};                txPolygon (triangleKlyuvCipa,    3);
+    POINT triangleKlyuvCipaOpen[] = {{x + (int) (19*size) *LR, y - (int) ( 5*size)},                {x + (int) (25*size) *LR, y - (int) (10*size) - OpenKluv},     {x + (int) (15*size) *LR, y - (int) (11*size)}};                txPolygon (triangleKlyuvCipaOpen,3);
 
     txSetColor     (RGB (  0,   0,   0));
     txSetFillColor (RGB (255, 255, 255));
-    txCircle (x + 5*size *LR, y - 7*size, 5*size *glazCipa);
+    txCircle (x + (int) (5*size) *LR, y - (int) (7*size), (int) (5*size) *glazCipa);
 
     txSetFillColor (RGB (  0,   0,   0));
-    txCircle (x + 6*size *LR, y - 7*size, 2*size *glazCipa);
+    txCircle (x + (int) (6*size) *LR, y - (int) (7*size), (int) (2*size) *glazCipa);
     }
 
 //{=========================================================================================================
@@ -264,63 +264,63 @@ void PaintKura (int x, int y, double size, int glazKura,
     {
     txSetColor     (RGB (255,   0,   0));
     txSetFillColor (RGB (255,   0,   0));
-    txCircle (x - 40*size *LR, y - 44*size, 10*size);
-    txCircle (x - 30*size *LR, y - 47*size, 10*size);
-    txCircle (x - 20*size *LR, y - 44*size, 10*size);
+    txCircle (x - (int) (40*size) *LR, y - (int) (44*size), (int) (10*size));
+    txCircle (x - (int) (30*size) *LR, y - (int) (47*size), (int) (10*size));
+    txCircle (x - (int) (20*size) *LR, y - (int) (44*size), (int) (10*size));
 
     txSetColor     (RGB (  0,   0,   0));
     txSetFillColor (RGB (255, 255, 255));
-    txCircle (x,               y,           35*size);
-    txCircle (x - 30*size *LR, y - 30*size, 18*size);
-    txPie    (x - 20*size *LR, y - 15*size, x + 20*size *LR, y + 15*size + flap, -215*LR, 180 + flap);
+    txCircle (x,               y,           (int) (35*size));
+    txCircle (x - (int) (30*size) *LR, y - (int) (30*size), (int) (18*size));
+    txPie    (x - (int) (20*size) *LR, y - (int) (15*size), x + (int) (20*size) *LR, y + (int) (15*size) + flap, -215*LR, 180 + flap);
 
     txSetColor     (RGB (  0,   0,   0));
     txSetFillColor (RGB (255, 255, 255));
-    txEllipse (x - 43*size *LR, y - 40*size + glazKura*size, x - 33*size *LR, y - 30*size - glazKura*size);
+    txEllipse (x - (int) (43*size )*LR, y - (int) (40*size) + (int) (glazKura*size), x - (int) (33*size) *LR, y - (int) (30*size) - (int) (glazKura*size));
     txSetFillColor (RGB (  0,   0,   0));
-    txCircle  (x - 39*size *LR, y - 34*size, 2*size);
+    txCircle  (x - (int) (39*size) *LR, y - (int) (34*size), (int) (2*size));
 
     txSetColor     (RGB (255,   0,   0));
     txSetFillColor (RGB (255,   0,   0));
-    POINT triangleRightNogaKura[] = {{x + 10*size *LR, y + 34*size + LeftNogaKura}, {x + 15*size *LR, y + 45*size + LeftNogaKura}, {x +  5*size *LR, y + 45*size + LeftNogaKura}};  txPolygon (triangleRightNogaKura,3);
-    POINT triangleLeftNogaKura [] = {{x - 10*size *LR, y + 34*size +RightNogaKura}, {x -  5*size *LR, y + 45*size +RightNogaKura}, {x - 15*size *LR, y + 45*size +RightNogaKura}};  txPolygon (triangleLeftNogaKura, 3);
-    POINT triangleKlyuvKura    [] = {{x - 48*size *LR, y - 30*size},                {x - 54*size *LR, y - 23*size + OpenKluv},     {x - 45*size *LR, y - 23*size}};                 txPolygon (triangleKlyuvKura,    3);
-    POINT triangleKlyuvKuraOpen[] = {{x - 48*size *LR, y - 30*size},                {x - 54*size *LR, y - 23*size - OpenKluv},     {x - 45*size *LR, y - 23*size}};                 txPolygon (triangleKlyuvKuraOpen,3);
+    POINT triangleRightNogaKura[] = {{x + (int) (10*size) *LR, y + (int) (34*size) + LeftNogaKura}, {x + (int) (15*size) *LR, y + (int) (45*size) + LeftNogaKura}, {x + (int) ( 5*size) *LR, y + (int) (45*size) + LeftNogaKura}};  txPolygon (triangleRightNogaKura,3);
+    POINT triangleLeftNogaKura [] = {{x - (int) (10*size) *LR, y + (int) (34*size) +RightNogaKura}, {x - (int) ( 5*size) *LR, y + (int) (45*size) +RightNogaKura}, {x - (int) (15*size) *LR, y + (int) (45*size) +RightNogaKura}};  txPolygon (triangleLeftNogaKura, 3);
+    POINT triangleKlyuvKura    [] = {{x - (int) (48*size) *LR, y - (int) (30*size)},                {x - (int) (54*size) *LR, y - (int) (23*size) + OpenKluv},     {x - (int) (45*size) *LR, y - (int) (23*size)}};                 txPolygon (triangleKlyuvKura,    3);
+    POINT triangleKlyuvKuraOpen[] = {{x - (int) (48*size) *LR, y - (int) (30*size)},                {x - (int) (54*size) *LR, y - (int) (23*size) - OpenKluv},     {x - (int) (45*size) *LR, y - (int) (23*size)}};                 txPolygon (triangleKlyuvKuraOpen,3);
     }
 
 void PaintGysen (int x, int y, double sizeX, double sizeY, double sizeGlazGus, int LR)
     {
     txSetColor     (RGB (244, 122,   0), 2);
     txSetFillColor (RGB (255, 148,  40));
-    txCircle (x + 30*sizeX *LR, y - 2*sizeY, 6*sizeY);
-    txCircle (x + 25*sizeX *LR, y - 4*sizeY, 6*sizeY);
-    txCircle (x + 20*sizeX *LR, y - 5*sizeY, 6*sizeY);
-    txCircle (x + 15*sizeX *LR, y - 4*sizeY, 6*sizeY);
-    txCircle (x + 10*sizeX *LR, y          , 6*sizeY);
-    txCircle (x +  5*sizeX *LR, y - 2*sizeY, 6*sizeY);
-    txCircle (x,                y,           6*sizeY);
+    txCircle (x + (int) (30*sizeX) *LR, y - (int) (2*sizeY), (int) (6*sizeY));
+    txCircle (x + (int) (25*sizeX) *LR, y - (int) (4*sizeY), (int) (6*sizeY));
+    txCircle (x + (int) (20*sizeX) *LR, y - (int) (5*sizeY), (int) (6*sizeY));
+    txCircle (x + (int) (15*sizeX) *LR, y - (int) (4*sizeY), (int) (6*sizeY));
+    txCircle (x + (int) (10*sizeX) *LR,                  y , (int) (6*sizeY));
+    txCircle (x + (int)  (5*sizeX) *LR, y - (int) (2*sizeY), (int) (6*sizeY));
+    txCircle (                       x,                   y, (int) (6*sizeY));
 
     txSetColor     (RGB (  0,   0,   0));
     txSetFillColor (RGB (  0,   0,   0));
-    txCircle (x - 2*LR, y, 2*sizeGlazGus);
+    txCircle (x - 2*LR, y, (int) (2*sizeGlazGus));
     }
 
 void PaintOblako (int x, int y, double size, int color)
     {
     txSetColor     (color);
     txSetFillColor (color);
-    txCircle (x,           y,           40*size);
-    txCircle (x - 50*size, y,           40*size);
-    txCircle (x + 50*size, y,           40*size);
-    txCircle (x - 25*size, y - 50*size, 40*size);
-    txCircle (x + 25*size, y - 50*size, 40*size);
+    txCircle (x,                   y,                   (int) (40*size));
+    txCircle (x - (int) (50*size), y,                   (int) (40*size));
+    txCircle (x + (int) (50*size), y,                   (int) (40*size));
+    txCircle (x - (int) (25*size), y - (int) (50*size), (int) (40*size));
+    txCircle (x + (int) (25*size), y - (int) (50*size), (int) (40*size));
     }
 
 void PaintAppl(int x, int y, double sizeAppl)
     {
     txSetColor     (RGB (255,   0,   0));
     txSetFillColor (RGB (255,   0,   0));
-    txCircle (x, y, 10*sizeAppl);
+    txCircle (x, y, (int) (10*sizeAppl));
     }
 
 void PaintCat (int x, int y, double sizeX, double sizeY, int nose,
@@ -329,43 +329,43 @@ void PaintCat (int x, int y, double sizeX, double sizeY, int nose,
     {
     txSetColor     (color);                                     //голова кота
     txSetFillColor (color);
-    txCircle (x, y - 70*sizeY, 30*sizeY);
+    txCircle (x, y - (int) (70*sizeY), (int) (30*sizeY));
 
     txSetColor     (color);                                     //уши кота
     txSetFillColor (color);
-    POINT triangleLeftYho [] = {{x - 30*sizeX, y - 80*sizeY}, {x - 35*sizeX +  LeftYho, y - 115*sizeY}, {x - 5*sizeX, y - 95*sizeY}}; txPolygon (triangleLeftYho, 3);
-    POINT triangleRightYho[] = {{x + 25*sizeX, y - 80*sizeY}, {x + 30*sizeX + RightYho, y - 115*sizeY}, {x,           y - 95*sizeY}}; txPolygon (triangleRightYho,3);
+    POINT triangleLeftYho [] = {{x - (int) (30*sizeX), y - (int) (80*sizeY)}, {x - (int) (35*sizeX) +  LeftYho, y - (int) (115*sizeY)}, {x - (int) (5*sizeX), y - (int) (95*sizeY)}}; txPolygon (triangleLeftYho, 3);
+    POINT triangleRightYho[] = {{x + (int) (25*sizeX), y - (int) (80*sizeY)}, {x + (int) (30*sizeX) + RightYho, y - (int) (115*sizeY)}, {x,                   y - (int) (95*sizeY)}}; txPolygon (triangleRightYho,3);
 
-    txSetColor     (color, 25*sizeY);                           //тело кота
-    txLine   (x, y - 20*sizeY, x, y - 70*sizeY);
+    txSetColor     (color, (int) (25*sizeY));                           //тело кота
+    txLine   (x, y - (int) (20*sizeY), x, y - (int) (70*sizeY));
 
-    txSetColor     (color, 10*sizeY);                           //хвост кота
-    txArc    (x - 50*sizeX, y - 70*sizeY, x, y - 20*sizeY, 180 + khvost, 170);
+    txSetColor     (color, (int) (10*sizeY));                           //хвост кота
+    txArc    (x - (int) (50*sizeX), y - (int) (70*sizeY), x, y - (int) (20*sizeY), 180 + khvost, 170);
 
     txSetColor     (RGB (  0,   0,   0));
-    txSetFillColor (RGB (255, 255, 250));
-    txEllipse (x - 25*sizeX, y - 25*sizeY +  LeftNogaCat, x,            y +  LeftNogaCat);    //лапы кота
-    txEllipse (x,            y - 25*sizeY + RightNogaCat, x + 25*sizeX, y + RightNogaCat);
+    txSetFillColor (RGB (255, 255, 250));                                 //лапы кота
+    txEllipse (x - (int) (25*sizeX), y - (int) (25*sizeY) +  LeftNogaCat, x,                    y +  LeftNogaCat);
+    txEllipse (x,                    y - (int) (25*sizeY) + RightNogaCat, x + (int) (25*sizeX), y + RightNogaCat);
 
-    txEllipse (x - 25*sizeX + sizeGlazCat*sizeY, y - 95*sizeY + sizeGlazCat*sizeY,            //глаза кота
-               x,                                y - 70*sizeY - sizeGlazCat*sizeY);
-    txEllipse (x,                                y - 95*sizeY + sizeGlazCat*sizeY,
-               x + 25*sizeX - sizeGlazCat*sizeY, y - 70*sizeY - sizeGlazCat*sizeY);
+    txEllipse (x - (int) (25*sizeX) + (int) (sizeGlazCat*sizeY), y - (int) (95*sizeY) + (int) (sizeGlazCat*sizeY),            //глаза кота
+               x,                                                y - (int) (70*sizeY) - (int) (sizeGlazCat*sizeY));
+    txEllipse (x,                                                y - (int) (95*sizeY) + (int) (sizeGlazCat*sizeY),
+               x + (int) (25*sizeX) - (int) (sizeGlazCat*sizeY), y - (int) (70*sizeY) - (int) (sizeGlazCat*sizeY));
 
     txSetColor     (RGB (  0,   0,  0));
     txSetFillColor (RGB (  0,   0,  0));
-    txEllipse (x - 15*sizeX + glazCatZrachek, y - 92*sizeY + sizeGlazCat, x - 10*sizeX + glazCatZrachek, y - 75*sizeY - sizeGlazCat);
-    txEllipse (x + 10*sizeX + glazCatZrachek, y - 92*sizeY + sizeGlazCat, x + 15*sizeX + glazCatZrachek, y - 75*sizeY - sizeGlazCat);
+    txEllipse (x - (int) (15*sizeX) + glazCatZrachek, y - (int) (92*sizeY) + sizeGlazCat, x - (int) (10*sizeX) + glazCatZrachek, y - (int) (75*sizeY) - sizeGlazCat);
+    txEllipse (x + (int) (10*sizeX) + glazCatZrachek, y - (int) (92*sizeY) + sizeGlazCat, x + (int) (15*sizeX) + glazCatZrachek, y - (int) (75*sizeY) - sizeGlazCat);
                                                                                       //нос кота
-    POINT triangleNose[] = {{x - 5*sizeX, y - 70*sizeY + nose}, {x, y - 65*sizeY + nose}, {x + 5*sizeX, y - 70*sizeY + nose}}; txPolygon (triangleNose,3);
-    txLine (x - 40*sizeX, y - 70*sizeY + nose, x -  5*sizeX, y - 65*sizeY + nose);    //усы кота
-    txLine (x - 45*sizeX, y - 63*sizeY + nose, x -  5*sizeX, y - 63*sizeY + nose);
-    txLine (x - 40*sizeX, y - 55*sizeY + nose, x -  5*sizeX, y - 61*sizeY + nose);
-    txLine (x +  5*sizeX, y - 65*sizeY + nose, x + 40*sizeX, y - 70*sizeY + nose);
-    txLine (x +  5*sizeX, y - 63*sizeY + nose, x + 45*sizeX, y - 63*sizeY + nose);
-    txLine (x +  5*sizeX, y - 61*sizeY + nose, x + 40*sizeX, y - 55*sizeY + nose);
+    POINT triangleNose[] = {{x - (int) (5*sizeX), y - (int) (70*sizeY) + nose},  {x, y - (int) (65*sizeY) + nose}, {x + (int) (5*sizeX), y - (int) (70*sizeY) + nose}}; txPolygon (triangleNose,3);
+    txLine (x - (int) (40*sizeX), y - (int) (70*sizeY) + nose, x - (int) ( 5*sizeX), y - (int) (65*sizeY) + nose);    //усы кота
+    txLine (x - (int) (45*sizeX), y - (int) (63*sizeY) + nose, x - (int) ( 5*sizeX), y - (int) (63*sizeY) + nose);
+    txLine (x - (int) (40*sizeX), y - (int) (55*sizeY) + nose, x - (int) ( 5*sizeX), y - (int) (61*sizeY) + nose);
+    txLine (x + (int) ( 5*sizeX), y - (int) (65*sizeY) + nose, x + (int) (40*sizeX), y - (int) (70*sizeY) + nose);
+    txLine (x + (int) ( 5*sizeX), y - (int) (63*sizeY) + nose, x + (int) (45*sizeX), y - (int) (63*sizeY) + nose);
+    txLine (x + (int) ( 5*sizeX), y - (int) (61*sizeY) + nose, x + (int) (40*sizeX), y - (int) (55*sizeY) + nose);
 
     txSetColor     (RGB (255, 0, 0));                                          //язык кота
     txSetFillColor (RGB (255, 0, 0));
-    txPie (x - 5*sizeX, y - 60*sizeY, x + 5*sizeX, y - 45*sizeY, -20, 20);
+    txPie (x - (int) (5*sizeX), y - (int) (60*sizeY), x + (int) (5*sizeX), y - (int) (45*sizeY), -20, 20);
     }

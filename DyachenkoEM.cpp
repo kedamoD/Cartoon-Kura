@@ -62,11 +62,11 @@ void MoveKyraVedetCip_1()
         txSelectFont ("Cambria", 50);
         txTextOut (300, 700, "Мама курица ведет цыплят гулять.");
 
-        PaintOblako ( 200 - 0.5*t,  70,   1, pale_blue);
-        PaintOblako (1100 - 0.5*t, 150, 0.8, turqoise);
-        PaintOblako ( 700 - 0.5*t,  80,   1, pale_blue);
-        PaintOblako ( 400 - 0.5*t, 100, 1.2, turqoise);
-        PaintOblako ( 900 - 0.5*t,  60, 0.7, lilac);
+        PaintOblako ( 200 - (int) (0.5*t),  70,   1, pale_blue);
+        PaintOblako (1100 - (int) (0.5*t), 150, 0.8, turqoise);
+        PaintOblako ( 700 - (int) (0.5*t),  80,   1, pale_blue);
+        PaintOblako ( 400 - (int) (0.5*t), 100, 1.2, turqoise);
+        PaintOblako ( 900 - (int) (0.5*t),  60, 0.7, lilac);
 
         PaintKura ( 40  + 2*t, 520,  1.2, t/10%10, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2 *(-5), -1, 0, t%2 * 5);
         PaintCipa (-30  + 2*t, 580,  0.8,       1, ((t/10) % 2 * 2 - 1) * 5, (t/10) % 2 *(-5),  1, 0);
@@ -104,15 +104,15 @@ void MoveCipaWalking_2()
         PaintOblako ( 500 - t, 100, 1.2, turqoise);
         PaintOblako (1000 - t,  60, 0.7, lilac);
 
-        PaintKura ( 440,         520,         1.2, 0,                  0,                 0, -1,        0, t%2 * 5);
-        PaintCipa (-30  + 2*t,   580 - 0.1*t, 0.8, 1, ((t/10) % 2*2-1)*5,   (t/10) % 2*(-5),  1,        0);
-        PaintCipa ( 10  + 2*t,   600 + 0.1*t, 0.8, 1, ((t/10) % 2*2-1)*5,   (t/10) % 2*(-5),  1, t%2 * 10);
-        PaintCipa (-100 + 2*t,   540 + 0.2*t, 0.8, 1, ((t/10) % 2*2-1)*5,   (t/10) % 2*(-5),  1,        0);
-        PaintCipa ( 330,         600,         0.8, 1,                  0,                 0,  1,        0);
-        PaintCipa ( 420 - 1*t,   560 + 0.2*t, 0.8, 1, ((t/10) % 2*2-1)*5,   (t/10) % 2*(-5), -1,        0);
-        PaintCipa (-40  + 1.5*t, 420 + 0.8*t, 0.8, 1, ((t/10) % 2*2-1)*5,   (t/10) % 2*(-5),  1,        0);
+        PaintKura ( 440,                 520,                 1.2, 0,                  0,                 0, -1,        0, t%2 * 5);
+        PaintCipa (-30  + 2*t,           580 - (int) (0.1*t), 0.8, 1, ((t/10) % 2*2-1)*5,   (t/10) % 2*(-5),  1,        0);
+        PaintCipa ( 10  + 2*t,           600 + (int) (0.1*t), 0.8, 1, ((t/10) % 2*2-1)*5,   (t/10) % 2*(-5),  1, t%2 * 10);
+        PaintCipa (-100 + 2*t,           540 + (int) (0.2*t), 0.8, 1, ((t/10) % 2*2-1)*5,   (t/10) % 2*(-5),  1,        0);
+        PaintCipa ( 330,                 600,                 0.8, 1,                  0,                 0,  1,        0);
+        PaintCipa ( 420 - 1*t,           560 + (int) (0.2*t), 0.8, 1, ((t/10) % 2*2-1)*5,   (t/10) % 2*(-5), -1,        0);
+        PaintCipa (-40  + (int) (1.5*t), 420 + (int) (0.8*t), 0.8, 1, ((t/10) % 2*2-1)*5,   (t/10) % 2*(-5),  1,        0);
 
-        PaintCat (750 + 0.5*t, 440, 0.7, 0.9, 1, 1, 1, (-t/10) % 10, (t/10) % 10, ((t/10) % 2*2-1)*5, (t/10) % 2*(-5), 0,                      ryzhiy);
+        PaintCat (750 + (int) (0.5*t), 440, 0.7, 0.9, 1, 1, 1, (-t/10) % 10, (t/10) % 10, ((t/10) % 2*2-1)*5, (t/10) % 2*(-5), 0,                      ryzhiy);
         PaintCat (400,         450, 1.2, 1.2, 1, 1, 1, (-t/5)  % 10, (t/5)  % 10,                  1,               1, ((t/10) %2 * 2 - 1)*30, brown);
 
         t++;
@@ -140,16 +140,16 @@ void MoveCipaWalking_3()
         PaintOblako ( 500 - t, 100, 1.2, turqoise);
         PaintOblako (1000 - t,  60, 0.7, lilac);
 
-        PaintKura ( 440,         520,         1.2, t/10%10,                      0,                 0,         1,        0, t%2 * 5);
-        PaintCipa ( 570,         550,         0.8,       1,                      0,                 0, t%2*2 - 1,        0);
-        PaintCipa ( 400 + 0.7*t, 600 + 0.1*t, 0.8,       1, ((t/10) % 2 * 2 - 1)*5, (t/10) % 2 * (-5),         1,        0);
-        PaintCipa (-100 + 2.0*t, 540 + 0.2*t, 0.8,       1, ((t/10) % 2 * 2 - 1)*5, (t/10) % 2 * (-5), t%2*2 - 1,        0);
-        PaintCipa ( 332,         600,         0.8,       1,                      0,                 0,       - 1, t%2 * 10);
-        PaintCipa (-30  + 0.5*t, 530 + 0.3*t, 0.8,       1, ((t/10) % 2 * 2 - 1)*5, (t/10) % 2 * (-5),         1,        0);
-        PaintCipa (-40  + 1.5*t, 540 + 0.4*t, 0.8,       1, ((t/10) % 2 * 2 - 1)*5, (t/10) % 2 * (-5), t%2*2 - 1,        0);
+        PaintKura (                 440,                 520, 1.2, t/10%10,                      0,                 0,         1,        0, t%2 * 5);
+        PaintCipa (                 570,                 550, 0.8,       1,                      0,                 0, t%2*2 - 1,        0);
+        PaintCipa ( 400 + (int) (0.7*t), 600 + (int) (0.1*t), 0.8,       1, ((t/10) % 2 * 2 - 1)*5, (t/10) % 2 * (-5),         1,        0);
+        PaintCipa (-100 + (int) (2.0*t), 540 + (int) (0.2*t), 0.8,       1, ((t/10) % 2 * 2 - 1)*5, (t/10) % 2 * (-5), t%2*2 - 1,        0);
+        PaintCipa (                 332,                 600, 0.8,       1,                      0,                 0,       - 1, t%2 * 10);
+        PaintCipa (-30  + (int) (0.5*t), 530 + (int) (0.3*t), 0.8,       1, ((t/10) % 2 * 2 - 1)*5, (t/10) % 2 * (-5),         1,        0);
+        PaintCipa (-40  + (int) (1.5*t), 540 + (int) (0.4*t), 0.8,       1, ((t/10) % 2 * 2 - 1)*5, (t/10) % 2 * (-5), t%2*2 - 1,        0);
 
-        PaintCat (750 + 0.5*t, 440,         0.7,  0.9, 1, 1, 1, (-t/10) % 10, (t/10) % 10, ((t/10) % 2*2-1)* 5, (t/10) % 2* (-5),                      0, ryzhiy);
-        PaintCat (250 + 0.5*t, 510 - 0.2*t, 1.2,  1.2, 1, 1, 1, (-t/5)  % 10, (t/5)  % 10, ((t/10) % 2*2-1)*10, (t/10) % 2*(-10), ((t/10) %2 * 2 - 1)*30,  brown);
+        PaintCat (750 + (int) (0.5*t), 440,                 0.7,  0.9, 1, 1, 1, (-t/10) % 10, (t/10) % 10, ((t/10) % 2*2-1)* 5, (t/10) % 2* (-5),                      0, ryzhiy);
+        PaintCat (250 + (int) (0.5*t), 510 - (int) (0.2*t), 1.2,  1.2, 1, 1, 1, (-t/5)  % 10, (t/5)  % 10, ((t/10) % 2*2-1)*10, (t/10) % 2*(-10), ((t/10) %2 * 2 - 1)*30,  brown);
 
         t++;
         txSleep (200);
@@ -172,13 +172,13 @@ void FellAppl_4()
         txSelectFont ("Cambria", 50);
         txTextOut (300, 700, "-Ой!   -Ой!   -Ой!");
 
-        PaintOblako (-50 - t*0.1,  70,   1, pale_blue);
-        PaintOblako (850 - t*0.1, 150, 0.8, turqoise);
-        PaintOblako (450 - t*0.1,  80,   1, pale_blue);
-        PaintOblako (150 - t*0.1, 100, 1.2, turqoise);
-        PaintOblako (650 - t*0.1,  60, 0.7, lilac);
+        PaintOblako (-50 - (int) (t*0.1),  70,   1, pale_blue);
+        PaintOblako (850 - (int) (t*0.1), 150, 0.8, turqoise);
+        PaintOblako (450 - (int) (t*0.1),  80,   1, pale_blue);
+        PaintOblako (150 - (int) (t*0.1), 100, 1.2, turqoise);
+        PaintOblako (650 - (int) (t*0.1),  60, 0.7, lilac);
 
-        PaintAppl (820 - t*0.2,  300 + t, 1);
+        PaintAppl (820 - (int) (t*0.2),  300 + t, 1);
 
         PaintKura (440, 520, 1.2, t%10, 0, 0,  1, 0, 1);
         PaintCipa (570, 550, 0.8, 1,    0, 0, -1, 0);
@@ -191,8 +191,8 @@ void FellAppl_4()
         PaintCat (925 + 2*t, 440, 0.7,  0.9, 1, 1, 1, (-t/10) % 10, (t/10) % 10, ((t/10) % 2*2-1)* 5, (t/10) % 2* (-5),                      0, ryzhiy);
         PaintCat (425 - 2*t, 440, 1.2,  1.2, 1, 1, 1, (-t/5)  % 10, (t/5)  % 10, ((t/10) % 2*2-1)*10, (t/10) % 2*(-10), ((t/10) %2 * 2 - 1)*30,  brown);
 
-        PaintTree (200, 370, 1.2);
-        PaintTree (100, 380, 1.7);
+        PaintTree (200,  370, 1.2);
+        PaintTree (100,  380, 1.7);
         PaintTree (1200, 450, 0.8);
         PaintTree (1050, 425, 0.8);
 
@@ -204,13 +204,13 @@ void FellAppl_4()
         {
         PaintBackground();
 
-        PaintOblako (-70 - t*0.2,  70,   1, pale_blue);
-        PaintOblako (830 - t*0.2, 150, 0.8, turqoise);
-        PaintOblako (430 - t*0.2,  80,   1, pale_blue);
-        PaintOblako (130 - t*0.2, 100, 1.2, turqoise);
-        PaintOblako (630 - t*0.2,  60, 0.7, lilac);
+        PaintOblako (-70 - (int) (t*0.2),  70,   1, pale_blue);
+        PaintOblako (830 - (int) (t*0.2), 150, 0.8, turqoise);
+        PaintOblako (430 - (int) (t*0.2),  80,   1, pale_blue);
+        PaintOblako (130 - (int) (t*0.2), 100, 1.2, turqoise);
+        PaintOblako (630 - (int) (t*0.2),  60, 0.7, lilac);
 
-        PaintAppl(780 - t*0.2, 500 + t, 1 + t*0.01);
+        PaintAppl(780 - (int) (t*0.2), 500 + t, 1 + (int) (t*0.01));
 
         PaintKura (440, 520, 1.2, t%10, 0, 0, -1, 0, 0);
         PaintCipa (570, 550, 0.8, 1,    0, 0,  1, 0);
@@ -243,15 +243,15 @@ void VhodGysen_5()
         txSelectFont ("Cambria", 50);
         txTextOut (500, 700, "-ААА,   ЧТО ЭТО???");
 
-        PaintOblako ( -90 - t*0.2,  70,   1, pale_blue);
-        PaintOblako ( 810 - t*0.2, 150, 0.8, turqoise);
-        PaintOblako ( 410 - t*0.2,  80,   1, pale_blue);
-        PaintOblako ( 110 - t*0.2, 100, 1.2, turqoise);
-        PaintOblako ( 610 - t*0.2,  60, 0.7, lilac);
-        PaintOblako (1340 - t*0.2, 100, 0.9, lilac);
-        PaintOblako (1440 - t*0.2,  60, 0.8, turqoise);
+        PaintOblako ( -90 - (int) (t*0.2),  70,   1, pale_blue);
+        PaintOblako ( 810 - (int) (t*0.2), 150, 0.8, turqoise);
+        PaintOblako ( 410 - (int) (t*0.2),  80,   1, pale_blue);
+        PaintOblako ( 110 - (int) (t*0.2), 100, 1.2, turqoise);
+        PaintOblako ( 610 - (int) (t*0.2),  60, 0.7, lilac);
+        PaintOblako (1340 - (int) (t*0.2), 100, 0.9, lilac);
+        PaintOblako (1440 - (int) (t*0.2),  60, 0.8, turqoise);
 
-        PaintGysen (745 - t*0.5, 600 + t*0.2, 1, 1, 1, 1);
+        PaintGysen (745 - (int) (t*0.5), 600 + (int) (t*0.2), 1, 1, 1, 1);
         PaintAppl  (760, 600, 2);
 
         PaintKura (440, 520, 1.2,  15, 0, 0, -1,  10, -100);
@@ -295,12 +295,12 @@ void PobegGysen_6()
         txSelectFont ("Cambria", 50);
         txTextOut (500, 700, "- Лови его!     - Поиграем!     - Хватай! ");
 
-        PaintOblako ( 770 - t*0.2, 150, 0.8, turqoise);
-        PaintOblako ( 370 - t*0.2,  80,   1, pale_blue);
-        PaintOblako (  70 - t*0.2, 100, 1.2, turqoise);
-        PaintOblako ( 570 - t*0.2,  60, 0.7, lilac);
-        PaintOblako (1300 - t*0.2, 100, 0.9, lilac);
-        PaintOblako (1400 - t*0.2,  60, 0.8, turqoise);
+        PaintOblako ( 770 - (int) (t*0.2), 150, 0.8, turqoise);
+        PaintOblako ( 370 - (int) (t*0.2),  80,   1, pale_blue);
+        PaintOblako (  70 - (int) (t*0.2), 100, 1.2, turqoise);
+        PaintOblako ( 570 - (int) (t*0.2),  60, 0.7, lilac);
+        PaintOblako (1300 - (int) (t*0.2), 100, 0.9, lilac);
+        PaintOblako (1400 - (int) (t*0.2),  60, 0.8, turqoise);
 
         PaintGysen (670 + 3*t, 640, 1, 1, 2, -1);
         PaintAppl  (760, 600, 2);
@@ -327,12 +327,12 @@ void PlayCat_7 ()
         PaintCat (0 + t*5, 570 + ((t/10) %2 * 2 - 1)*30, 1.2,  1.2, 1, (t/10) % 5*(-1), 1, (-t/5) % 10, (t/5)  % 10, ((t/10) % 2*2-1)*10, (t/10) % 2*(-10), ((t/10) %2 * 2 - 1)*30,  brown);
         PaintAppl (760, 600, 2);
 
-        PaintOblako ( 650 - t*0.2, 150, 0.8, turqoise);
-        PaintOblako ( 250 - t*0.2,  80,   1, pale_blue);
-        PaintOblako ( -50 - t*0.2, 100, 1.2, turqoise);
-        PaintOblako ( 450 - t*0.2,  60, 0.7, lilac);
-        PaintOblako (1180 - t*0.2, 100, 0.9, lilac);
-        PaintOblako (1280 - t*0.2,  60, 0.8, turqoise);
+        PaintOblako ( 650 - (int) (t*0.2), 150, 0.8, turqoise);
+        PaintOblako ( 250 - (int) (t*0.2),  80,   1, pale_blue);
+        PaintOblako ( -50 - (int) (t*0.2), 100, 1.2, turqoise);
+        PaintOblako ( 450 - (int) (t*0.2),  60, 0.7, lilac);
+        PaintOblako (1180 - (int) (t*0.2), 100, 0.9, lilac);
+        PaintOblako (1280 - (int) (t*0.2),  60, 0.8, turqoise);
 
 
         t++;
@@ -346,12 +346,12 @@ void PlayCat_7 ()
         PaintCat  (750 - t*5,  600, 1.2, 1.2, 1, (t/10) % 5*(-1), t%10, (-t/5) % 10, (t/5) % 10, ((t/10) % 2*2-1)*10, (t/10) % 2*(-10), ((t/10) %2 * 2 - 1)*30,  brown);
         PaintAppl (760 - t*10, 600 + ((t/10) %2 * 2 - 1)*20, 2);
 
-        PaintOblako ( 629 - t*0.2, 150, 0.8, turqoise);
-        PaintOblako ( 229 - t*0.2,  80,   1, pale_blue);
-        PaintOblako ( -71 - t*0.2, 100, 1.2, turqoise);
-        PaintOblako ( 429 - t*0.2,  60, 0.7, lilac);
-        PaintOblako (1159 - t*0.2, 100, 0.9, lilac);
-        PaintOblako (1259 - t*0.2,  60, 0.8, turqoise);
+        PaintOblako ( 629 - (int) (t*0.2), 150, 0.8, turqoise);
+        PaintOblako ( 229 - (int) (t*0.2),  80,   1, pale_blue);
+        PaintOblako ( -71 - (int) (t*0.2), 100, 1.2, turqoise);
+        PaintOblako ( 429 - (int) (t*0.2),  60, 0.7, lilac);
+        PaintOblako (1159 - (int) (t*0.2), 100, 0.9, lilac);
+        PaintOblako (1259 - (int) (t*0.2),  60, 0.8, turqoise);
 
         t++;
         txSleep (100);
@@ -402,11 +402,11 @@ void FinishTitles()
         txClear();
         PaintBackground();
 
-        PaintOblako ( 597 - t*0.2, 150, 0.8, turqoise);
-        PaintOblako ( 197 - t*0.2,  80,   1, pale_blue);
-        PaintOblako ( 397 - t*0.2,  60, 0.7, lilac);
-        PaintOblako (1127 - t*0.2, 100, 0.9, lilac);
-        PaintOblako (1227 - t*0.2,  60, 0.8, turqoise);
+        PaintOblako ( 597 - (int) (t*0.2), 150, 0.8, turqoise);
+        PaintOblako ( 197 - (int) (t*0.2),  80,   1, pale_blue);
+        PaintOblako ( 397 - (int) (t*0.2),  60, 0.7, lilac);
+        PaintOblako (1127 - (int) (t*0.2), 100, 0.9, lilac);
+        PaintOblako (1227 - (int) (t*0.2),  60, 0.8, turqoise);
 
         txSetColor (TX_WHITE);
         txSelectFont ("Cambria", 70);
