@@ -7,7 +7,7 @@
 //! @author     Dyachenko Ekaterina Mikhailovna, teacher of informatics, Nefteyugansk
 //} =====================================================================================
 
-//#include "TXlib.h"
+
 #include "ChickensLib.h"
 
 

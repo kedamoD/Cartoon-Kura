@@ -1,10 +1,11 @@
-#ifndef CHICKENSLIB_H_INCLUDED
-#define CHICKENSLIB_H_INCLUDED
-
-
-
-#endif // CHICKENSLIB_H_INCLUDED
-
+// {=====================================================================================
+//! @brief      Cartoon library "Chickens for a walk"
+//!
+//!             My first cartoon library when learning C ++
+//!
+//! @date       2021
+//! @author     Dyachenko Ekaterina Mikhailovna, teacher of informatics, Nefteyugansk
+//} =====================================================================================
 
 #include "TXlib.h"
 
