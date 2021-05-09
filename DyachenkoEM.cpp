@@ -7,9 +7,7 @@
 //! @author     Dyachenko Ekaterina Mikhailovna, teacher of informatics, Nefteyugansk
 //} =====================================================================================
 
-
 #include "ChickensLib.h"
-
 
 void StartTitles();
 void MoveKyraVedetCip_1();
@@ -20,8 +18,6 @@ void VhodGysen_5();
 void PobegGysen_6();
 void PlayCat_7();
 void FinishTitles();
-
-
 
 int main()
     {
@@ -112,8 +108,8 @@ void MoveCipaWalking_2()
         PaintCipa ( 420 - 1*t,           560 + (int) (0.2*t), 0.8, 1, ((t/10) % 2*2-1)*5,   (t/10) % 2*(-5), -1,        0);
         PaintCipa (-40  + (int) (1.5*t), 420 + (int) (0.8*t), 0.8, 1, ((t/10) % 2*2-1)*5,   (t/10) % 2*(-5),  1,        0);
 
-        PaintCat (750 + (int) (0.5*t), 440, 0.7, 0.9, 1, 1, 1, (-t/10) % 10, (t/10) % 10, ((t/10) % 2*2-1)*5, (t/10) % 2*(-5), 0,                      ryzhiy);
-        PaintCat (400,         450, 1.2, 1.2, 1, 1, 1, (-t/5)  % 10, (t/5)  % 10,                  1,               1, ((t/10) %2 * 2 - 1)*30, brown);
+        PaintCat (750 + (int) (0.5*t), 440, 0.7, 0.9, 1, 1, 1, (-t/10) % 10, (t/10) % 10, ((t/10) % 2*2-1)*5, (t/10) % 2*(-5),                      0, ryzhiy);
+        PaintCat (                400, 450, 1.2, 1.2, 1, 1, 1, (-t/5)  % 10, (t/5)  % 10,                  1,               1, ((t/10) %2 * 2 - 1)*30, brown);
 
         t++;
         txSleep (200);
@@ -334,7 +330,6 @@ void PlayCat_7 ()
         PaintOblako (1180 - (int) (t*0.2), 100, 0.9, lilac);
         PaintOblako (1280 - (int) (t*0.2),  60, 0.8, turqoise);
 
-
         t++;
         txSleep (100);
         }
@@ -358,8 +353,6 @@ void PlayCat_7 ()
         }
     }
 //------------------------------------------------------------------------------------------------------------
-
-
 
 void StartTitles()
     {
