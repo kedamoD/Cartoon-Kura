@@ -13,6 +13,15 @@ ___
 
 2)	Создаем первую программу и рисуем из простейших фигур декорации и персонажей будущего мультфильма.
 
+![Alt-текст]( https://github.com/kedamoD/Cartoon-Kura/blob/main/Pictures/PaintAppl.jpg  "Appl")
+![Alt-текст]( https://github.com/kedamoD/Cartoon-Kura/blob/main/Pictures/PaintAppleTree.jpg  "AppleTree")
+![Alt-текст]( https://github.com/kedamoD/Cartoon-Kura/blob/main/Pictures/PaintCat.jpg  "PaintCat")
+![Alt-текст]( https://github.com/kedamoD/Cartoon-Kura/blob/main/Pictures/PaintCipa.jpg  "PaintCipa")
+![Alt-текст]( https://github.com/kedamoD/Cartoon-Kura/blob/main/Pictures/PaintGysen.jpg  "PaintGysen")
+![Alt-текст]( https://github.com/kedamoD/Cartoon-Kura/blob/main/Pictures/PaintKura.jpg  "PaintKura")
+![Alt-текст]( https://github.com/kedamoD/Cartoon-Kura/blob/main/Pictures/PaintOblako.jpg  "PaintOblako")
+![Alt-текст]( https://github.com/kedamoD/Cartoon-Kura/blob/main/Pictures/PaintSpruce.jpg  "PaintSpruce")
+![Alt-текст]( https://github.com/kedamoD/Cartoon-Kura/blob/main/Pictures/PaintTree.jpg  "PaintTree")
 
 3)	Добавляем параметры (ширину, высоту, размер, цвет, и т.д.), чтобы все можно было размножить и сделать разными по размеру, форме, цвету и т.д.
 
