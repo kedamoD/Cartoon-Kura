@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Исходный файл ChickensLib.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ChickensLib.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_chickens_lib_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//{=====================================================================================</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"></span><span class="comment">//}=====================================================================================</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &quot;TXlib.h&quot;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_chickens_lib_8h.html#a92ad9ba93a7490f230e9bd1f499a0959">PaintBackground</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___scenery.html#gaa8618dcee7b7b35eebced0d62b30de39">PaintAppleTree</a> (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___scenery.html#gaa7ff65e702b85d874cfe50c269602545">PaintTree</a>      (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">double</span> size);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___scenery.html#ga9813244cd45750b880a172343cda52ce">PaintSpruce</a>    (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">double</span> sizeX, <span class="keywordtype">double</span> sizeY, <span class="keywordtype">int</span> veter);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___animals.html#ga3dc0b4d113bc7dbbfcb676699544d41f">PaintCipa</a>      (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">double</span> size, <span class="keywordtype">double</span> glazCipa,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                     <span class="keywordtype">int</span> LeftNogaCipa, <span class="keywordtype">int</span> RightNogaCipa, <span class="keywordtype">int</span> LR, <span class="keywordtype">int</span> OpenKluv);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___animals.html#ga2e8dbf556f69c39d02d5c631011334a7">PaintKura</a>      (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">double</span> size, <span class="keywordtype">int</span> glazKura,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                     <span class="keywordtype">int</span> LeftNogaKura, <span class="keywordtype">int</span> RightNogaKura, <span class="keywordtype">int</span> LR, <span class="keywordtype">int</span> OpenKluv, <span class="keywordtype">int</span> flap);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___animals.html#gae0dc780a0d585ac1b88912caf5061420">PaintGysen</a>     (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">double</span> sizeX, <span class="keywordtype">double</span> sizeY, <span class="keywordtype">double</span> sizeGlazGysen, <span class="keywordtype">int</span> LR);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___other.html#ga41a1193bcd3666f76184e9ccc970b988">PaintAppl</a>      (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">double</span> sizeAppl);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___scenery.html#ga548530da4051ad2fa1488f45a764c616">PaintOblako</a>    (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">double</span> size, <span class="keywordtype">int</span> color);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___animals.html#ga17aaad115a018491c49890481c8c3eb2">PaintCat</a>       (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">double</span> sizeX, <span class="keywordtype">double</span> sizeY, <span class="keywordtype">int</span> nose,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                     <span class="keywordtype">int</span> glazCatZrachek, <span class="keywordtype">double</span> sizeGlazCat,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                     <span class="keywordtype">int</span> LeftYho, <span class="keywordtype">int</span> RightYho, <span class="keywordtype">int</span> LeftNogaCat, <span class="keywordtype">int</span> RightNogaCat,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                     <span class="keywordtype">int</span> khvost, <span class="keywordtype">int</span> color);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="_chickens_lib_8h.html#ad1d79ef5d0787a9b28c3eee33d5148c2">   71</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="_chickens_lib_8h.html#ad1d79ef5d0787a9b28c3eee33d5148c2">ryzhiy</a>    = (RGB (255, 115,  50));</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="_chickens_lib_8h.html#aa906b51ba2b8fb6b5268938b577f367e">   72</a></span>&#160;      <span class="keywordtype">int</span> <a class="code" href="_chickens_lib_8h.html#aa906b51ba2b8fb6b5268938b577f367e">brown</a>     = (RGB (181,  90,  50));</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="_chickens_lib_8h.html#af1870cc944b49babe67ddae07850aa31">   73</a></span>&#160;      <span class="keywordtype">int</span> <a class="code" href="_chickens_lib_8h.html#af1870cc944b49babe67ddae07850aa31">pale_blue</a> = (RGB (200, 255, 255));</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="_chickens_lib_8h.html#a638c1a6bfd2aa232fb05ed92d8e6571f">   74</a></span>&#160;      <span class="keywordtype">int</span> <a class="code" href="_chickens_lib_8h.html#a638c1a6bfd2aa232fb05ed92d8e6571f">turqoise</a>  = (RGB (227, 255, 255));</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="_chickens_lib_8h.html#ab2b2e4c2de8ab19d9ae0b448e0103fc3">   75</a></span>&#160;      <span class="keywordtype">int</span> <a class="code" href="_chickens_lib_8h.html#ab2b2e4c2de8ab19d9ae0b448e0103fc3">lilac</a>     = (RGB (230, 205, 255));</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">//------------------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="_chickens_lib_8h.html#a92ad9ba93a7490f230e9bd1f499a0959">   85</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_chickens_lib_8h.html#a92ad9ba93a7490f230e9bd1f499a0959">PaintBackground</a>()</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">//txCreateWindow (1280, 800);</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    txSetColor     (RGB (108, 236, 214));</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    txSetFillColor (RGB (108, 236, 214));</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    txClear();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    txSetColor     (RGB (51, 255, 102));</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    txSetFillColor (RGB (51, 255, 102));</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    txRectangle (0, 300, 1280, 800);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="group___scenery.html#ga9813244cd45750b880a172343cda52ce">PaintSpruce</a> (400, 280, 1.3,   2, 0);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="group___scenery.html#ga9813244cd45750b880a172343cda52ce">PaintSpruce</a> (600, 290, 1.3, 1.3, 0);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="group___scenery.html#ga9813244cd45750b880a172343cda52ce">PaintSpruce</a> (500, 300, 0.5, 0.8, 0);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="group___scenery.html#ga9813244cd45750b880a172343cda52ce">PaintSpruce</a> (700, 270, 1.3, 1.4, 0);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="group___scenery.html#ga9813244cd45750b880a172343cda52ce">PaintSpruce</a> (900, 290, 1.3, 1.3, 0);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="group___scenery.html#gaa7ff65e702b85d874cfe50c269602545">PaintTree</a> (200, 370, 1.2);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="group___scenery.html#gaa7ff65e702b85d874cfe50c269602545">PaintTree</a> (100, 380, 1.7);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="group___scenery.html#gaa8618dcee7b7b35eebced0d62b30de39">PaintAppleTree</a> ( 920, 320);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="group___scenery.html#gaa8618dcee7b7b35eebced0d62b30de39">PaintAppleTree</a> (1080, 330);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="group___scenery.html#gaa8618dcee7b7b35eebced0d62b30de39">PaintAppleTree</a> (800,  350);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="group___scenery.html#gaa7ff65e702b85d874cfe50c269602545">PaintTree</a> ( 725, 410, 0.8);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="group___scenery.html#gaa7ff65e702b85d874cfe50c269602545">PaintTree</a> (1200, 450, 0.8);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="group___scenery.html#gaa7ff65e702b85d874cfe50c269602545">PaintTree</a> (1050, 425, 0.8);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">//{-----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment"></span><span class="comment">//}-----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="group___scenery.html#gaa8618dcee7b7b35eebced0d62b30de39">  140</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___scenery.html#gaa8618dcee7b7b35eebced0d62b30de39">PaintAppleTree</a> (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y)</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    txSetColor     (RGB (136,   0,  21), 25);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    txLine (x, y, x, y + 100);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    txSetColor     (RGB (  0, 128,   0));</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    txSetFillColor (RGB (  0, 128,   0));</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    txCircle (x,y - 100, 100);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    txSetColor     (RGB (255,   0,   0));</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    txSetFillColor (RGB (255,   0,   0));</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    txCircle (x - 70, y - 80,  10);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    txCircle (x + 20, y - 160, 10);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    txCircle (x - 10, y - 110, 10);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    txCircle (x - 20, y - 30,  10);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    txCircle (x + 50, y - 50,  10);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment">//{=========================================================================================================</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment"></span><span class="comment">//}=========================================================================================================</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="group___scenery.html#gaa7ff65e702b85d874cfe50c269602545">  183</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___scenery.html#gaa7ff65e702b85d874cfe50c269602545">PaintTree</a> (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">double</span> size)</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    txSetColor     (RGB (136,   0,  21), (<span class="keywordtype">int</span>) (15*size));</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    txLine (x, y, x, y + (<span class="keywordtype">int</span>) (100*size));</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    txSetColor     (RGB (  0, 128,   0), 5);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    txSetFillColor (RGB (  0, 210,   0));</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    txCircle (x + (<span class="keywordtype">int</span>) (30*size), y - (<span class="keywordtype">int</span>) (130*size), (<span class="keywordtype">int</span>) (40*size));</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    txCircle (x - (<span class="keywordtype">int</span>) (30*size), y - (<span class="keywordtype">int</span>) ( 90*size), (<span class="keywordtype">int</span>) (50*size));</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    txCircle (x + (<span class="keywordtype">int</span>) (30*size), y - (<span class="keywordtype">int</span>) ( 75*size), (<span class="keywordtype">int</span>) (50*size));</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    txCircle (x - (<span class="keywordtype">int</span>) (20*size), y - (<span class="keywordtype">int</span>) ( 50*size), (<span class="keywordtype">int</span>) (60*size));</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    txCircle (x + (<span class="keywordtype">int</span>) (20*size), y - (<span class="keywordtype">int</span>) ( 30*size), (<span class="keywordtype">int</span>) (50*size));</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="comment">//{=========================================================================================================</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="comment"></span><span class="comment">//}=========================================================================================================</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="group___scenery.html#ga9813244cd45750b880a172343cda52ce">  226</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___scenery.html#ga9813244cd45750b880a172343cda52ce">PaintSpruce</a> (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">double</span> sizeX, <span class="keywordtype">double</span> sizeY, <span class="keywordtype">int</span> veter)</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    txSetColor     (RGB (136,   0,  21), (<span class="keywordtype">int</span>) (15*sizeX));</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    txLine (x, y, x, y + (<span class="keywordtype">int</span>) (30*sizeX));</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    txSetColor     (RGB (  0, 200,   0), (<span class="keywordtype">int</span>) (3*sizeX));</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    txSetFillColor (RGB (  0, 150,   0));</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    POINT triangle1[] = {{x - (int) (80*sizeX), y},                    {x + veter, y - (int)  (60*sizeY)}, {x + (int) (80*sizeX), y}};                    txPolygon (triangle1,3);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    POINT triangle2[] = {{x - (int) (60*sizeX), y - (int) (40*sizeY)}, {x + veter, y - (int)  (90*sizeY)}, {x + (int) (60*sizeX), y - (int) (40*sizeY)}}; txPolygon (triangle2,3);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    POINT triangle3[] = {{x - (int) (40*sizeX), y - (int) (80*sizeY)}, {x + veter, y - (int) (120*sizeY)}, {x + (int) (40*sizeX), y - (int) (80*sizeY)}}; txPolygon (triangle3,3);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="comment">//{=========================================================================================================</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="comment"></span><span class="comment">//}=========================================================================================================</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="group___animals.html#ga3dc0b4d113bc7dbbfcb676699544d41f">  270</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___animals.html#ga3dc0b4d113bc7dbbfcb676699544d41f">PaintCipa</a> (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">double</span> size, <span class="keywordtype">double</span> glazCipa,</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                <span class="keywordtype">int</span> LeftNogaCipa, <span class="keywordtype">int</span> RightNogaCipa, <span class="keywordtype">int</span> LR, <span class="keywordtype">int</span> OpenKluv)</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    txSetColor     (RGB (255, 247,  85));</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    txSetFillColor (RGB (255, 247,  85));</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    txCircle (x, y, (<span class="keywordtype">int</span>) (20*size));</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    txSetColor     (RGB (255,   0,   0));</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    txSetFillColor (RGB (255,   0,   0));</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    POINT triangleLeftNogaCipa [] = {{x - (int) (10*size) *LR, y + (int) (17*size) + LeftNogaCipa}, {x - (int) ( 5*size) *LR, y + (int) (25*size) + LeftNogaCipa}, {x - (int) (15*size) *LR, y + (int) (25*size) + LeftNogaCipa}}; txPolygon (triangleLeftNogaCipa, 3);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    POINT triangleRightNogaCipa[] = {{x + (int) (10*size) *LR, y + (int) (17*size) +RightNogaCipa}, {x + (int) (15*size) *LR, y + (int) (25*size) +RightNogaCipa}, {x + (int) ( 5*size) *LR, y + (int) (25*size) +RightNogaCipa}}; txPolygon (triangleRightNogaCipa,3);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    POINT triangleKlyuvCipa    [] = {{x + (int) (19*size) *LR, y - (int) ( 5*size)},                {x + (int) (25*size) *LR, y - (int) (10*size) + OpenKluv},     {x + (int) (15*size) *LR, y - (int) (11*size)}};                txPolygon (triangleKlyuvCipa,    3);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    POINT triangleKlyuvCipaOpen[] = {{x + (int) (19*size) *LR, y - (int) ( 5*size)},                {x + (int) (25*size) *LR, y - (int) (10*size) - OpenKluv},     {x + (int) (15*size) *LR, y - (int) (11*size)}};                txPolygon (triangleKlyuvCipaOpen,3);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    txSetColor     (RGB (  0,   0,   0));</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    txSetFillColor (RGB (255, 255, 255));</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    txCircle (x + (<span class="keywordtype">int</span>) (5*size) *LR, y - (<span class="keywordtype">int</span>) (7*size), (<span class="keywordtype">int</span>) (5*size) *glazCipa);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    txSetFillColor (RGB (  0,   0,   0));</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    txCircle (x + (<span class="keywordtype">int</span>) (6*size) *LR, y - (<span class="keywordtype">int</span>) (7*size), (<span class="keywordtype">int</span>) (2*size) *glazCipa);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    }</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment">//{=========================================================================================================</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="comment"></span><span class="comment">//}=========================================================================================================</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
+<div class="line"><a name="l00325"></a><span class="lineno"><a class="line" href="group___animals.html#ga2e8dbf556f69c39d02d5c631011334a7">  325</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___animals.html#ga2e8dbf556f69c39d02d5c631011334a7">PaintKura</a> (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">double</span> size, <span class="keywordtype">int</span> glazKura,</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                <span class="keywordtype">int</span> LeftNogaKura, <span class="keywordtype">int</span> RightNogaKura, <span class="keywordtype">int</span> LR, <span class="keywordtype">int</span> OpenKluv, <span class="keywordtype">int</span> flap)</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    {</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    txSetColor     (RGB (255,   0,   0));</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    txSetFillColor (RGB (255,   0,   0));</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    txCircle (x - (<span class="keywordtype">int</span>) (40*size) *LR, y - (<span class="keywordtype">int</span>) (44*size), (<span class="keywordtype">int</span>) (10*size));</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    txCircle (x - (<span class="keywordtype">int</span>) (30*size) *LR, y - (<span class="keywordtype">int</span>) (47*size), (<span class="keywordtype">int</span>) (10*size));</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    txCircle (x - (<span class="keywordtype">int</span>) (20*size) *LR, y - (<span class="keywordtype">int</span>) (44*size), (<span class="keywordtype">int</span>) (10*size));</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    txSetColor     (RGB (  0,   0,   0));</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    txSetFillColor (RGB (255, 255, 255));</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    txCircle (x,               y,           (<span class="keywordtype">int</span>) (35*size));</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    txCircle (x - (<span class="keywordtype">int</span>) (30*size) *LR, y - (<span class="keywordtype">int</span>) (30*size), (<span class="keywordtype">int</span>) (18*size));</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    txPie    (x - (<span class="keywordtype">int</span>) (20*size) *LR, y - (<span class="keywordtype">int</span>) (15*size), x + (<span class="keywordtype">int</span>) (20*size) *LR, y + (<span class="keywordtype">int</span>) (15*size) + flap, -215*LR, 180 + flap);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    txSetColor     (RGB (  0,   0,   0));</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    txSetFillColor (RGB (255, 255, 255));</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    txEllipse (x - (<span class="keywordtype">int</span>) (43*size )*LR, y - (<span class="keywordtype">int</span>) (40*size) + (<span class="keywordtype">int</span>) (glazKura*size), x - (<span class="keywordtype">int</span>) (33*size) *LR, y - (<span class="keywordtype">int</span>) (30*size) - (<span class="keywordtype">int</span>) (glazKura*size));</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    txSetFillColor (RGB (  0,   0,   0));</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    txCircle  (x - (<span class="keywordtype">int</span>) (39*size) *LR, y - (<span class="keywordtype">int</span>) (34*size), (<span class="keywordtype">int</span>) (2*size));</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    txSetColor     (RGB (255,   0,   0));</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    txSetFillColor (RGB (255,   0,   0));</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    POINT triangleRightNogaKura[] = {{x + (int) (10*size) *LR, y + (int) (34*size) + LeftNogaKura}, {x + (int) (15*size) *LR, y + (int) (45*size) + LeftNogaKura}, {x + (int) ( 5*size) *LR, y + (int) (45*size) + LeftNogaKura}};  txPolygon (triangleRightNogaKura,3);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    POINT triangleLeftNogaKura [] = {{x - (int) (10*size) *LR, y + (int) (34*size) +RightNogaKura}, {x - (int) ( 5*size) *LR, y + (int) (45*size) +RightNogaKura}, {x - (int) (15*size) *LR, y + (int) (45*size) +RightNogaKura}};  txPolygon (triangleLeftNogaKura, 3);</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    POINT triangleKlyuvKura    [] = {{x - (int) (48*size) *LR, y - (int) (30*size)},                {x - (int) (54*size) *LR, y - (int) (23*size) + OpenKluv},     {x - (int) (45*size) *LR, y - (int) (23*size)}};                 txPolygon (triangleKlyuvKura,    3);</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    POINT triangleKlyuvKuraOpen[] = {{x - (int) (48*size) *LR, y - (int) (30*size)},                {x - (int) (54*size) *LR, y - (int) (23*size) - OpenKluv},     {x - (int) (45*size) *LR, y - (int) (23*size)}};                 txPolygon (triangleKlyuvKuraOpen,3);</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    }</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="comment">//{=========================================================================================================</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="comment"></span><span class="comment">//}=========================================================================================================</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160; </div>
+<div class="line"><a name="l00383"></a><span class="lineno"><a class="line" href="group___animals.html#gae0dc780a0d585ac1b88912caf5061420">  383</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___animals.html#gae0dc780a0d585ac1b88912caf5061420">PaintGysen</a> (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">double</span> sizeX, <span class="keywordtype">double</span> sizeY, <span class="keywordtype">double</span> sizeGlazGus, <span class="keywordtype">int</span> LR)</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    {</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    txSetColor     (RGB (244, 122,   0), 2);</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    txSetFillColor (RGB (255, 148,  40));</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    txCircle (x + (<span class="keywordtype">int</span>) (30*sizeX) *LR, y - (<span class="keywordtype">int</span>) (2*sizeY), (<span class="keywordtype">int</span>) (6*sizeY));</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    txCircle (x + (<span class="keywordtype">int</span>) (25*sizeX) *LR, y - (<span class="keywordtype">int</span>) (4*sizeY), (<span class="keywordtype">int</span>) (6*sizeY));</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    txCircle (x + (<span class="keywordtype">int</span>) (20*sizeX) *LR, y - (<span class="keywordtype">int</span>) (5*sizeY), (<span class="keywordtype">int</span>) (6*sizeY));</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    txCircle (x + (<span class="keywordtype">int</span>) (15*sizeX) *LR, y - (<span class="keywordtype">int</span>) (4*sizeY), (<span class="keywordtype">int</span>) (6*sizeY));</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    txCircle (x + (<span class="keywordtype">int</span>) (10*sizeX) *LR,                  y , (<span class="keywordtype">int</span>) (6*sizeY));</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    txCircle (x + (<span class="keywordtype">int</span>)  (5*sizeX) *LR, y - (<span class="keywordtype">int</span>) (2*sizeY), (<span class="keywordtype">int</span>) (6*sizeY));</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    txCircle (                       x,                   y, (<span class="keywordtype">int</span>) (6*sizeY));</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160; </div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    txSetColor     (RGB (  0,   0,   0));</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    txSetFillColor (RGB (  0,   0,   0));</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    txCircle (x - 2*LR, y, (<span class="keywordtype">int</span>) (2*sizeGlazGus));</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    }</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160; </div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;<span class="comment">//{=========================================================================================================</span></div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;<span class="comment"></span><span class="comment">//}=========================================================================================================</span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
+<div class="line"><a name="l00426"></a><span class="lineno"><a class="line" href="group___scenery.html#ga548530da4051ad2fa1488f45a764c616">  426</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___scenery.html#ga548530da4051ad2fa1488f45a764c616">PaintOblako</a> (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">double</span> size, <span class="keywordtype">int</span> color)</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    {</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    txSetColor     (color);</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    txSetFillColor (color);</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    txCircle (x,                   y,                   (<span class="keywordtype">int</span>) (40*size));</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    txCircle (x - (<span class="keywordtype">int</span>) (50*size), y,                   (<span class="keywordtype">int</span>) (40*size));</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    txCircle (x + (<span class="keywordtype">int</span>) (50*size), y,                   (<span class="keywordtype">int</span>) (40*size));</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    txCircle (x - (<span class="keywordtype">int</span>) (25*size), y - (<span class="keywordtype">int</span>) (50*size), (<span class="keywordtype">int</span>) (40*size));</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    txCircle (x + (<span class="keywordtype">int</span>) (25*size), y - (<span class="keywordtype">int</span>) (50*size), (<span class="keywordtype">int</span>) (40*size));</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    }</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160; </div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="comment">//{=========================================================================================================</span></div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="comment"></span><span class="comment">//}=========================================================================================================</span></div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160; </div>
+<div class="line"><a name="l00471"></a><span class="lineno"><a class="line" href="group___other.html#ga41a1193bcd3666f76184e9ccc970b988">  471</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___other.html#ga41a1193bcd3666f76184e9ccc970b988">PaintAppl</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">double</span> sizeAppl)</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    {</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    txSetColor     (RGB (255,   0,   0));</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    txSetFillColor (RGB (255,   0,   0));</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    txCircle (x, y, (<span class="keywordtype">int</span>) (10*sizeAppl));</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    }</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160; </div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;<span class="comment">//{=========================================================================================================</span></div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;<span class="comment"></span><span class="comment">//}=========================================================================================================</span></div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160; </div>
+<div class="line"><a name="l00522"></a><span class="lineno"><a class="line" href="group___animals.html#ga17aaad115a018491c49890481c8c3eb2">  522</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___animals.html#ga17aaad115a018491c49890481c8c3eb2">PaintCat</a> (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">double</span> sizeX, <span class="keywordtype">double</span> sizeY, <span class="keywordtype">int</span> nose,</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;               <span class="keywordtype">int</span> glazCatZrachek, <span class="keywordtype">double</span> sizeGlazCat,</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;               <span class="keywordtype">int</span> LeftYho, <span class="keywordtype">int</span> RightYho, <span class="keywordtype">int</span> LeftNogaCat, <span class="keywordtype">int</span> RightNogaCat, <span class="keywordtype">int</span> khvost, <span class="keywordtype">int</span> color)</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    {</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    txSetColor     (color);                                     <span class="comment">//голова кота</span></div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    txSetFillColor (color);</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;    txCircle (x, y - (<span class="keywordtype">int</span>) (70*sizeY), (<span class="keywordtype">int</span>) (30*sizeY));</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160; </div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    txSetColor     (color);                                     <span class="comment">//уши кота</span></div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    txSetFillColor (color);</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    POINT triangleLeftYho [] = {{x - (int) (30*sizeX), y - (int) (80*sizeY)}, {x - (int) (35*sizeX) +  LeftYho, y - (int) (115*sizeY)}, {x - (int) (5*sizeX), y - (int) (95*sizeY)}}; txPolygon (triangleLeftYho, 3);</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    POINT triangleRightYho[] = {{x + (int) (25*sizeX), y - (int) (80*sizeY)}, {x + (int) (30*sizeX) + RightYho, y - (int) (115*sizeY)}, {x,                   y - (int) (95*sizeY)}}; txPolygon (triangleRightYho,3);</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160; </div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    txSetColor     (color, (<span class="keywordtype">int</span>) (25*sizeY));                           <span class="comment">//тело кота</span></div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    txLine   (x, y - (<span class="keywordtype">int</span>) (20*sizeY), x, y - (<span class="keywordtype">int</span>) (70*sizeY));</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160; </div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    txSetColor     (color, (<span class="keywordtype">int</span>) (10*sizeY));                           <span class="comment">//хвост кота</span></div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    txArc    (x - (<span class="keywordtype">int</span>) (50*sizeX), y - (<span class="keywordtype">int</span>) (70*sizeY), x, y - (<span class="keywordtype">int</span>) (20*sizeY), 180 + khvost, 170);</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160; </div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    txSetColor     (RGB (  0,   0,   0));</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    txSetFillColor (RGB (255, 255, 250));                                 <span class="comment">//лапы кота</span></div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    txEllipse (x - (<span class="keywordtype">int</span>) (25*sizeX), y - (<span class="keywordtype">int</span>) (25*sizeY) +  LeftNogaCat, x,                    y +  LeftNogaCat);</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;    txEllipse (x,                    y - (<span class="keywordtype">int</span>) (25*sizeY) + RightNogaCat, x + (<span class="keywordtype">int</span>) (25*sizeX), y + RightNogaCat);</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160; </div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    txEllipse (x - (<span class="keywordtype">int</span>) (25*sizeX) + (<span class="keywordtype">int</span>) (sizeGlazCat*sizeY), y - (<span class="keywordtype">int</span>) (95*sizeY) + (<span class="keywordtype">int</span>) (sizeGlazCat*sizeY),            <span class="comment">//глаза кота</span></div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;               x,                                                y - (<span class="keywordtype">int</span>) (70*sizeY) - (<span class="keywordtype">int</span>) (sizeGlazCat*sizeY));</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;    txEllipse (x,                                                y - (<span class="keywordtype">int</span>) (95*sizeY) + (<span class="keywordtype">int</span>) (sizeGlazCat*sizeY),</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;               x + (<span class="keywordtype">int</span>) (25*sizeX) - (<span class="keywordtype">int</span>) (sizeGlazCat*sizeY), y - (<span class="keywordtype">int</span>) (70*sizeY) - (<span class="keywordtype">int</span>) (sizeGlazCat*sizeY));</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160; </div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    txSetColor     (RGB (  0,   0,  0));</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    txSetFillColor (RGB (  0,   0,  0));</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;    txEllipse (x - (<span class="keywordtype">int</span>) (15*sizeX) + glazCatZrachek, y - (<span class="keywordtype">int</span>) (92*sizeY) + sizeGlazCat, x - (<span class="keywordtype">int</span>) (10*sizeX) + glazCatZrachek, y - (<span class="keywordtype">int</span>) (75*sizeY) - sizeGlazCat);</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;    txEllipse (x + (<span class="keywordtype">int</span>) (10*sizeX) + glazCatZrachek, y - (<span class="keywordtype">int</span>) (92*sizeY) + sizeGlazCat, x + (<span class="keywordtype">int</span>) (15*sizeX) + glazCatZrachek, y - (<span class="keywordtype">int</span>) (75*sizeY) - sizeGlazCat);</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;                                                                                      <span class="comment">//нос кота</span></div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    POINT triangleNose[] = {{x - (int) (5*sizeX), y - (int) (70*sizeY) + nose},  {x, y - (int) (65*sizeY) + nose}, {x + (int) (5*sizeX), y - (int) (70*sizeY) + nose}}; txPolygon (triangleNose,3);</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;    txLine (x - (<span class="keywordtype">int</span>) (40*sizeX), y - (<span class="keywordtype">int</span>) (70*sizeY) + nose, x - (<span class="keywordtype">int</span>) ( 5*sizeX), y - (<span class="keywordtype">int</span>) (65*sizeY) + nose);    <span class="comment">//усы кота</span></div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;    txLine (x - (<span class="keywordtype">int</span>) (45*sizeX), y - (<span class="keywordtype">int</span>) (63*sizeY) + nose, x - (<span class="keywordtype">int</span>) ( 5*sizeX), y - (<span class="keywordtype">int</span>) (63*sizeY) + nose);</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    txLine (x - (<span class="keywordtype">int</span>) (40*sizeX), y - (<span class="keywordtype">int</span>) (55*sizeY) + nose, x - (<span class="keywordtype">int</span>) ( 5*sizeX), y - (<span class="keywordtype">int</span>) (61*sizeY) + nose);</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    txLine (x + (<span class="keywordtype">int</span>) ( 5*sizeX), y - (<span class="keywordtype">int</span>) (65*sizeY) + nose, x + (<span class="keywordtype">int</span>) (40*sizeX), y - (<span class="keywordtype">int</span>) (70*sizeY) + nose);</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    txLine (x + (<span class="keywordtype">int</span>) ( 5*sizeX), y - (<span class="keywordtype">int</span>) (63*sizeY) + nose, x + (<span class="keywordtype">int</span>) (45*sizeX), y - (<span class="keywordtype">int</span>) (63*sizeY) + nose);</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;    txLine (x + (<span class="keywordtype">int</span>) ( 5*sizeX), y - (<span class="keywordtype">int</span>) (61*sizeY) + nose, x + (<span class="keywordtype">int</span>) (40*sizeX), y - (<span class="keywordtype">int</span>) (55*sizeY) + nose);</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160; </div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    txSetColor     (RGB (255, 0, 0));                                          <span class="comment">//язык кота</span></div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    txSetFillColor (RGB (255, 0, 0));</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    txPie (x - (<span class="keywordtype">int</span>) (5*sizeX), y - (<span class="keywordtype">int</span>) (60*sizeY), x + (<span class="keywordtype">int</span>) (5*sizeX), y - (<span class="keywordtype">int</span>) (45*sizeY), -20, 20);</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    }</div>
+<div class="ttc" id="a_chickens_lib_8h_html_a638c1a6bfd2aa232fb05ed92d8e6571f"><div class="ttname"><a href="_chickens_lib_8h.html#a638c1a6bfd2aa232fb05ed92d8e6571f">turqoise</a></div><div class="ttdeci">int turqoise</div><div class="ttdef"><b>Definition:</b> <a href="_chickens_lib_8h_source.html#l00074">ChickensLib.h:74</a></div></div>
+<div class="ttc" id="a_chickens_lib_8h_html_a92ad9ba93a7490f230e9bd1f499a0959"><div class="ttname"><a href="_chickens_lib_8h.html#a92ad9ba93a7490f230e9bd1f499a0959">PaintBackground</a></div><div class="ttdeci">void PaintBackground()</div><div class="ttdef"><b>Definition:</b> <a href="_chickens_lib_8h_source.html#l00085">ChickensLib.h:85</a></div></div>
+<div class="ttc" id="a_chickens_lib_8h_html_aa906b51ba2b8fb6b5268938b577f367e"><div class="ttname"><a href="_chickens_lib_8h.html#aa906b51ba2b8fb6b5268938b577f367e">brown</a></div><div class="ttdeci">int brown</div><div class="ttdef"><b>Definition:</b> <a href="_chickens_lib_8h_source.html#l00072">ChickensLib.h:72</a></div></div>
+<div class="ttc" id="a_chickens_lib_8h_html_ab2b2e4c2de8ab19d9ae0b448e0103fc3"><div class="ttname"><a href="_chickens_lib_8h.html#ab2b2e4c2de8ab19d9ae0b448e0103fc3">lilac</a></div><div class="ttdeci">int lilac</div><div class="ttdef"><b>Definition:</b> <a href="_chickens_lib_8h_source.html#l00075">ChickensLib.h:75</a></div></div>
+<div class="ttc" id="a_chickens_lib_8h_html_ad1d79ef5d0787a9b28c3eee33d5148c2"><div class="ttname"><a href="_chickens_lib_8h.html#ad1d79ef5d0787a9b28c3eee33d5148c2">ryzhiy</a></div><div class="ttdeci">const int ryzhiy</div><div class="ttdef"><b>Definition:</b> <a href="_chickens_lib_8h_source.html#l00071">ChickensLib.h:71</a></div></div>
+<div class="ttc" id="a_chickens_lib_8h_html_af1870cc944b49babe67ddae07850aa31"><div class="ttname"><a href="_chickens_lib_8h.html#af1870cc944b49babe67ddae07850aa31">pale_blue</a></div><div class="ttdeci">int pale_blue</div><div class="ttdef"><b>Definition:</b> <a href="_chickens_lib_8h_source.html#l00073">ChickensLib.h:73</a></div></div>
+<div class="ttc" id="agroup___animals_html_ga17aaad115a018491c49890481c8c3eb2"><div class="ttname"><a href="group___animals.html#ga17aaad115a018491c49890481c8c3eb2">PaintCat</a></div><div class="ttdeci">void PaintCat(int x, int y, double sizeX, double sizeY, int nose, int glazCatZrachek, double sizeGlazCat, int LeftYho, int RightYho, int LeftNogaCat, int RightNogaCat, int khvost, int color)</div><div class="ttdoc">Рисуем Котика</div><div class="ttdef"><b>Definition:</b> <a href="_chickens_lib_8h_source.html#l00522">ChickensLib.h:522</a></div></div>
+<div class="ttc" id="agroup___animals_html_ga2e8dbf556f69c39d02d5c631011334a7"><div class="ttname"><a href="group___animals.html#ga2e8dbf556f69c39d02d5c631011334a7">PaintKura</a></div><div class="ttdeci">void PaintKura(int x, int y, double size, int glazKura, int LeftNogaKura, int RightNogaKura, int LR, int OpenKluv, int flap)</div><div class="ttdoc">Рисуем Куру</div><div class="ttdef"><b>Definition:</b> <a href="_chickens_lib_8h_source.html#l00325">ChickensLib.h:325</a></div></div>
+<div class="ttc" id="agroup___animals_html_ga3dc0b4d113bc7dbbfcb676699544d41f"><div class="ttname"><a href="group___animals.html#ga3dc0b4d113bc7dbbfcb676699544d41f">PaintCipa</a></div><div class="ttdeci">void PaintCipa(int x, int y, double size, double glazCipa, int LeftNogaCipa, int RightNogaCipa, int LR, int OpenKluv)</div><div class="ttdoc">Рисуем Цыпленка</div><div class="ttdef"><b>Definition:</b> <a href="_chickens_lib_8h_source.html#l00270">ChickensLib.h:270</a></div></div>
+<div class="ttc" id="agroup___animals_html_gae0dc780a0d585ac1b88912caf5061420"><div class="ttname"><a href="group___animals.html#gae0dc780a0d585ac1b88912caf5061420">PaintGysen</a></div><div class="ttdeci">void PaintGysen(int x, int y, double sizeX, double sizeY, double sizeGlazGysen, int LR)</div><div class="ttdoc">Рисуем Гусеницу</div><div class="ttdef"><b>Definition:</b> <a href="_chickens_lib_8h_source.html#l00383">ChickensLib.h:383</a></div></div>
+<div class="ttc" id="agroup___other_html_ga41a1193bcd3666f76184e9ccc970b988"><div class="ttname"><a href="group___other.html#ga41a1193bcd3666f76184e9ccc970b988">PaintAppl</a></div><div class="ttdeci">void PaintAppl(int x, int y, double sizeAppl)</div><div class="ttdoc">Рисуем Яблоко (может упасть с дерева)</div><div class="ttdef"><b>Definition:</b> <a href="_chickens_lib_8h_source.html#l00471">ChickensLib.h:471</a></div></div>
+<div class="ttc" id="agroup___scenery_html_ga548530da4051ad2fa1488f45a764c616"><div class="ttname"><a href="group___scenery.html#ga548530da4051ad2fa1488f45a764c616">PaintOblako</a></div><div class="ttdeci">void PaintOblako(int x, int y, double size, int color)</div><div class="ttdoc">Рисуем Облако</div><div class="ttdef"><b>Definition:</b> <a href="_chickens_lib_8h_source.html#l00426">ChickensLib.h:426</a></div></div>
+<div class="ttc" id="agroup___scenery_html_ga9813244cd45750b880a172343cda52ce"><div class="ttname"><a href="group___scenery.html#ga9813244cd45750b880a172343cda52ce">PaintSpruce</a></div><div class="ttdeci">void PaintSpruce(int x, int y, double sizeX, double sizeY, int veter)</div><div class="ttdoc">Рисуем дерево Ель</div><div class="ttdef"><b>Definition:</b> <a href="_chickens_lib_8h_source.html#l00226">ChickensLib.h:226</a></div></div>
+<div class="ttc" id="agroup___scenery_html_gaa7ff65e702b85d874cfe50c269602545"><div class="ttname"><a href="group___scenery.html#gaa7ff65e702b85d874cfe50c269602545">PaintTree</a></div><div class="ttdeci">void PaintTree(int x, int y, double size)</div><div class="ttdoc">Рисуем лиственное дерево</div><div class="ttdef"><b>Definition:</b> <a href="_chickens_lib_8h_source.html#l00183">ChickensLib.h:183</a></div></div>
+<div class="ttc" id="agroup___scenery_html_gaa8618dcee7b7b35eebced0d62b30de39"><div class="ttname"><a href="group___scenery.html#gaa8618dcee7b7b35eebced0d62b30de39">PaintAppleTree</a></div><div class="ttdeci">void PaintAppleTree(int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="_chickens_lib_8h_source.html#l00140">ChickensLib.h:140</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
